@@ -1,9 +1,8 @@
-
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
  *
- * This source code is licensed under the CC-by-NC license found in the
+ * This source code is licensed under the BSD+Patents license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
@@ -26,12 +25,12 @@ struct ProductQuantizer;
 void write_index (const Index *idx, FILE *f);
 void write_index (const Index *idx, const char *fname);
 
-/**
- * mmap'ing currently works only for IndexIVFPQCompact, the
- * IndexIVFPQCompact destructor will unmap the file.
- */
-Index *read_index (FILE * f, bool try_mmap = false);
-Index *read_index (const char *fname, bool try_mmap = false);
+
+const int IO_FLAG_MMAP = 1;
+const int IO_FLAG_READ_ONLY = 2;
+
+Index *read_index (FILE * f, int io_flags = 0);
+Index *read_index (const char *fname, int io_flags = 0);
 
 
 

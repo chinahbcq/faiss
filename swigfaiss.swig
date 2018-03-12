@@ -1,9 +1,8 @@
-
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
  *
- * This source code is licensed under the CC-by-NC license found in the
+ * This source code is licensed under the BSD+Patents license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
@@ -16,16 +15,20 @@
 // SWIGPYTHON: Python-specific code
 // GPU_WRAPPER: also compile interfaces for GPU.
 
-
 #ifdef GPU_WRAPPER
 %module swigfaiss_gpu;
 #else
 %module swigfaiss;
 #endif
 
+#pragma SWIG nowarn=321
+#pragma SWIG nowarn=403
+#pragma SWIG nowarn=325
+
 typedef unsigned long uint64_t;
 typedef uint64_t size_t;
-typedef int int32_t ;
+typedef int int32_t;
+typedef unsigned char uint8_t;
 
 #define __restrict
 
@@ -70,20 +73,22 @@ extern "C" {
 
 #include "IndexFlat.h"
 #include "VectorTransform.h"
-
 #include "IndexLSH.h"
 #include "IndexPQ.h"
 #include "IndexIVF.h"
 #include "IndexIVFPQ.h"
-
+#include "IndexIVFFlat.h"
+#include "IndexScalarQuantizer.h"
+#include "IndexHNSW.h"
 #include "MetaIndexes.h"
+#include "FaissAssert.h"
 
 #include "index_io.h"
 
 #include "utils.h"
 #include "Heap.h"
 #include "AuxIndexStructures.h"
-
+#include "OnDiskInvertedLists.h"
 
 #include "Clustering.h"
 
@@ -108,6 +113,7 @@ namespace std {
     public:
         vector();
         void push_back(T);
+        void clear();
         T * data();
         size_t size();
         T at (size_t n) const;
@@ -117,12 +123,19 @@ namespace std {
 
 
 %template(FloatVector) std::vector<float>;
+%template(DoubleVector) std::vector<double>;
 %template(ByteVector) std::vector<uint8_t>;
 %template(Uint64Vector) std::vector<uint64_t>;
 %template(LongVector) std::vector<long>;
 %template(IntVector) std::vector<int>;
 %template(VectorTransformVector) std::vector<faiss::VectorTransform*>;
 %template(OperatingPointVector) std::vector<faiss::OperatingPoint>;
+%template(InvertedListsPtrVector) std::vector<faiss::InvertedLists*>;
+%template(FloatVectorVector) std::vector<std::vector<float> >;
+%template(ByteVectorVector) std::vector<std::vector<unsigned char> >;
+%template(LongVectorVector) std::vector<std::vector<long> >;
+
+
 
 #ifdef GPU_WRAPPER
 %template(GpuResourcesVector) std::vector<faiss::gpu::GpuResources*>;
@@ -140,12 +153,35 @@ namespace std {
  *******************************************************************/
 
 #ifdef SWIGPYTHON
+// %catches(faiss::FaissException);
+
+
 // Python-specific: release GIL by default for all functions
 %exception {
     Py_BEGIN_ALLOW_THREADS
-    $action
+    try {
+        $action
+    } catch(faiss::FaissException & e) {
+        PyEval_RestoreThread(_save);
+        PyErr_SetString(PyExc_RuntimeError, e.what());
+        SWIG_fail;
+    }
     Py_END_ALLOW_THREADS
 }
+
+#endif
+
+#ifdef SWIGLUA
+
+%exception {
+    try {
+        $action
+    } catch(faiss::FaissException & e) {
+        SWIG_Lua_pushferrstring(L, "C++ exception: %s", e.what());       \
+        goto fail;
+    }
+}
+
 #endif
 
 
@@ -163,6 +199,8 @@ int get_num_gpus();
 
 #include "gpu/StandardGpuResources.h"
 #include "gpu/GpuIndicesOptions.h"
+#include "gpu/GpuClonerOptions.h"
+#include "gpu/utils/MemorySpace.h"
 #include "gpu/GpuIndex.h"
 #include "gpu/GpuIndexFlat.h"
 #include "gpu/GpuIndexIVF.h"
@@ -208,20 +246,18 @@ int get_num_gpus()
 %include "ProductQuantizer.h"
 
 %include "VectorTransform.h"
-
 %include "IndexFlat.h"
 %include "IndexLSH.h"
 %include "PolysemousTraining.h"
 %include "IndexPQ.h"
 %include "IndexIVF.h"
+%include "IndexScalarQuantizer.h"
+%include "IndexHNSW.h"
+%include "IndexIVFFlat.h"
+%include "OnDiskInvertedLists.h"
 
 %ignore faiss::IndexIVFPQ::alloc_type;
 %include "IndexIVFPQ.h"
-
-
-
-
-
 
 
 
@@ -236,6 +272,8 @@ int get_num_gpus()
 %ignore faiss::gpu::IndexProxy::at(int) const;
 
 %include "gpu/GpuIndicesOptions.h"
+%include "gpu/GpuClonerOptions.h"
+%include "gpu/utils/MemorySpace.h"
 %include "gpu/GpuIndex.h"
 %include "gpu/GpuIndexFlat.h"
 %include "gpu/GpuIndexIVF.h"
@@ -256,11 +294,6 @@ local swigfaiss = swigfaiss_gpu
 #endif
 
 
-// Python-specific: do not release GIL any more, as functions below
-// use the Python/C API
-#ifdef SWIGPYTHON
-%exception;
-#endif
 
 
 /*******************************************************************
@@ -394,16 +427,22 @@ struct AsyncIndexSearchC {
 %typemap(out) faiss::Index * {
     DOWNCAST ( IndexIDMap )
     DOWNCAST ( IndexShards )
-    DOWNCAST ( IndexIVFPQCompact )
     DOWNCAST ( IndexIVFPQR )
     DOWNCAST ( IndexIVFPQ )
+    DOWNCAST ( IndexIVFScalarQuantizer )
     DOWNCAST ( IndexIVFFlat )
     DOWNCAST ( IndexIVF )
     DOWNCAST ( IndexFlat )
     DOWNCAST ( IndexPQ )
+    DOWNCAST ( IndexScalarQuantizer )
     DOWNCAST ( IndexLSH )
     DOWNCAST ( IndexPreTransform )
     DOWNCAST ( MultiIndexQuantizer )
+    DOWNCAST ( IndexHNSWFlat )
+    DOWNCAST ( IndexHNSWPQ )
+    DOWNCAST ( IndexHNSWSQ )
+    DOWNCAST ( IndexHNSW2Level )
+    DOWNCAST ( Index2Layer )
 #ifdef GPU_WRAPPER
     DOWNCAST_GPU ( IndexProxy )
     DOWNCAST_GPU ( GpuIndexIVFPQ )
@@ -412,7 +451,13 @@ struct AsyncIndexSearchC {
 #endif
     // default for non-recognized classes
     DOWNCAST( Index )
+    if ($1 == NULL)
     {
+#ifdef SWIGPYTHON
+        $result = SWIG_Py_Void();
+#endif
+        // Lua does not need a push for nil
+    } else {
         assert(false);
     }
 #ifdef SWIGLUA
@@ -426,6 +471,7 @@ struct AsyncIndexSearchC {
     DOWNCAST (PCAMatrix)
     DOWNCAST (RandomRotationMatrix)
     DOWNCAST (LinearTransform)
+    DOWNCAST (NormalizationTransform)
     DOWNCAST (VectorTransform)
     {
         assert(false);
@@ -434,7 +480,6 @@ struct AsyncIndexSearchC {
     SWIG_arg++;
 #endif
 }
-
 
 // just to downcast pointers that come from elsewhere (eg. direct
 // access to object fields)
@@ -451,6 +496,7 @@ faiss::VectorTransform * downcast_VectorTransform (faiss::VectorTransform *vt)
 
 faiss::Index * downcast_index (faiss::Index *);
 faiss::VectorTransform * downcast_VectorTransform (faiss::VectorTransform *vt);
+
 
 
 %include "index_io.h"
@@ -470,6 +516,11 @@ faiss::VectorTransform * downcast_VectorTransform (faiss::VectorTransform *vt);
 
 #endif
 
+// Python-specific: do not release GIL any more, as functions below
+// use the Python/C API
+#ifdef SWIGPYTHON
+%exception;
+#endif
 
 
 
@@ -498,11 +549,14 @@ PyObject *swig_ptr (PyObject *a)
     if(PyArray_TYPE(ao) == NPY_FLOAT32) {
         return SWIG_NewPointerObj(data, SWIGTYPE_p_float, 0);
     }
+    if(PyArray_TYPE(ao) == NPY_FLOAT64) {
+        return SWIG_NewPointerObj(data, SWIGTYPE_p_double, 0);
+    }
     if(PyArray_TYPE(ao) == NPY_INT32) {
         return SWIG_NewPointerObj(data, SWIGTYPE_p_int, 0);
     }
     if(PyArray_TYPE(ao) == NPY_UINT8) {
-        return SWIG_NewPointerObj(data, SWIGTYPE_p_uint8_t, 0);
+        return SWIG_NewPointerObj(data, SWIGTYPE_p_unsigned_char, 0);
     }
     if(PyArray_TYPE(ao) == NPY_UINT64) {
         return SWIG_NewPointerObj(data, SWIGTYPE_p_unsigned_long, 0);
@@ -515,7 +569,6 @@ PyObject *swig_ptr (PyObject *a)
 }
 
 
-
 %}
 
 
@@ -526,6 +579,25 @@ PyObject *swig_ptr (PyObject *a)
 
 // return a pointer usable as input for functions that expect pointers
 PyObject *swig_ptr (PyObject *a);
+
+%define REV_SWIG_PTR(ctype, numpytype)
+
+%{
+PyObject * rev_swig_ptr(ctype *src, npy_intp size) {
+    return PyArray_SimpleNewFromData(1, &size, numpytype, src);
+}
+%}
+
+PyObject * rev_swig_ptr(ctype *src, size_t size);
+
+%enddef
+
+REV_SWIG_PTR(float, NPY_FLOAT32);
+REV_SWIG_PTR(int, NPY_INT32);
+REV_SWIG_PTR(unsigned char, NPY_UINT8);
+REV_SWIG_PTR(unsigned long, NPY_UINT64);
+REV_SWIG_PTR(long, NPY_INT64);
+
 
 #endif
 
@@ -611,6 +683,26 @@ int omp_get_max_threads ();
 void *memcpy(void *dest, const void *src, size_t n);
 
 
+/*******************************************************************
+ * For Faiss/Pytorch interop via pointers encoded as longs
+ *******************************************************************/
+
+%inline %{
+float * cast_integer_to_float_ptr (long x) {
+    return (float*)x;
+}
+
+long * cast_integer_to_long_ptr (long x) {
+    return (long*)x;
+}
+
+int * cast_integer_to_int_ptr (long x) {
+    return (int*)x;
+}
+
+%}
+
+
 
 /*******************************************************************
  * Range search interface
@@ -623,9 +715,6 @@ void *memcpy(void *dest, const void *src, size_t n);
 
 %include "AuxIndexStructures.h"
 
-
-
-
 %{
 // may be useful for lua code launched in background from shell
 
@@ -636,3 +725,38 @@ void ignore_SIGTTIN() {
 %}
 
 void ignore_SIGTTIN();
+
+
+%inline %{
+
+// numpy misses a hash table implementation, hence this class. It
+// represents not found values as -1 like in the Index implementation
+
+struct MapLong2Long {
+    std::unordered_map<long, long> map;
+
+    void add(size_t n, const long *keys, const long *vals) {
+        map.reserve(map.size() + n);
+        for (size_t i = 0; i < n; i++) {
+            map[keys[i]] = vals[i];
+        }
+    }
+
+    long search(long key) {
+        if (map.count(key) == 0) {
+            return -1;
+        } else {
+            return map[key];
+        }
+    }
+
+    void search_multiple(size_t n, const long *keys, long * vals) {
+        for (size_t i = 0; i < n; i++) {
+            vals[i] = search(keys[i]);
+        }
+    }
+};
+
+%}
+
+// End of file...

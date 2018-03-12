@@ -1,9 +1,8 @@
-
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
  *
- * This source code is licensed under the CC-by-NC license found in the
+ * This source code is licensed under the BSD+Patents license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
@@ -43,6 +42,13 @@ class StandardGpuResources : public GpuResources {
   /// transfers
   void setPinnedMemory(size_t size);
 
+  /// Called to change the stream for work ordering
+  void setDefaultStream(int device, cudaStream_t stream);
+
+  /// Called to change the work ordering streams to the null stream
+  /// for all devices
+  void setDefaultNullStreamAllDevices();
+
  public:
   /// Internal system calls
   void initializeForDevice(int device) override;
@@ -63,8 +69,12 @@ class StandardGpuResources : public GpuResources {
   /// Our default stream that work is ordered on, one per each device
   std::unordered_map<int, cudaStream_t> defaultStreams_;
 
+  /// This contains particular streams as set by the user for
+  /// ordering, if any
+  std::unordered_map<int, cudaStream_t> userDefaultStreams_;
+
   /// Other streams we can use, per each device
-  std::unordered_map<int, std::vector<cudaStream_t>> alternateStreams_;
+  std::unordered_map<int, std::vector<cudaStream_t> > alternateStreams_;
 
   /// Async copy stream to use for GPU <-> CPU pinned memory copies
   std::unordered_map<int, cudaStream_t> asyncCopyStreams_;
@@ -73,7 +83,7 @@ class StandardGpuResources : public GpuResources {
   std::unordered_map<int, cublasHandle_t> blasHandles_;
 
   /// Temporary memory provider, per each device
-  std::unordered_map<int, std::unique_ptr<StackDeviceMemory>> memory_;
+  std::unordered_map<int, std::unique_ptr<StackDeviceMemory> > memory_;
 
   /// Pinned memory allocation for use with this GPU
   void* pinnedMemAlloc_;

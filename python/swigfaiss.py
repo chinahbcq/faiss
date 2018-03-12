@@ -80,6 +80,7 @@ class FloatVector(_object):
         try: self.this.append(this)
         except: self.this = this
     def push_back(self, *args): return _swigfaiss.FloatVector_push_back(self, *args)
+    def clear(self): return _swigfaiss.FloatVector_clear(self)
     def data(self): return _swigfaiss.FloatVector_data(self)
     def size(self): return _swigfaiss.FloatVector_size(self)
     def at(self, *args): return _swigfaiss.FloatVector_at(self, *args)
@@ -88,6 +89,27 @@ class FloatVector(_object):
     __del__ = lambda self : None;
 FloatVector_swigregister = _swigfaiss.FloatVector_swigregister
 FloatVector_swigregister(FloatVector)
+
+class DoubleVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, DoubleVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, DoubleVector, name)
+    __repr__ = _swig_repr
+    def __init__(self): 
+        this = _swigfaiss.new_DoubleVector()
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _swigfaiss.DoubleVector_push_back(self, *args)
+    def clear(self): return _swigfaiss.DoubleVector_clear(self)
+    def data(self): return _swigfaiss.DoubleVector_data(self)
+    def size(self): return _swigfaiss.DoubleVector_size(self)
+    def at(self, *args): return _swigfaiss.DoubleVector_at(self, *args)
+    def resize(self, *args): return _swigfaiss.DoubleVector_resize(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_DoubleVector
+    __del__ = lambda self : None;
+DoubleVector_swigregister = _swigfaiss.DoubleVector_swigregister
+DoubleVector_swigregister(DoubleVector)
 
 class ByteVector(_object):
     __swig_setmethods__ = {}
@@ -100,6 +122,7 @@ class ByteVector(_object):
         try: self.this.append(this)
         except: self.this = this
     def push_back(self, *args): return _swigfaiss.ByteVector_push_back(self, *args)
+    def clear(self): return _swigfaiss.ByteVector_clear(self)
     def data(self): return _swigfaiss.ByteVector_data(self)
     def size(self): return _swigfaiss.ByteVector_size(self)
     def at(self, *args): return _swigfaiss.ByteVector_at(self, *args)
@@ -120,6 +143,7 @@ class Uint64Vector(_object):
         try: self.this.append(this)
         except: self.this = this
     def push_back(self, *args): return _swigfaiss.Uint64Vector_push_back(self, *args)
+    def clear(self): return _swigfaiss.Uint64Vector_clear(self)
     def data(self): return _swigfaiss.Uint64Vector_data(self)
     def size(self): return _swigfaiss.Uint64Vector_size(self)
     def at(self, *args): return _swigfaiss.Uint64Vector_at(self, *args)
@@ -140,6 +164,7 @@ class LongVector(_object):
         try: self.this.append(this)
         except: self.this = this
     def push_back(self, *args): return _swigfaiss.LongVector_push_back(self, *args)
+    def clear(self): return _swigfaiss.LongVector_clear(self)
     def data(self): return _swigfaiss.LongVector_data(self)
     def size(self): return _swigfaiss.LongVector_size(self)
     def at(self, *args): return _swigfaiss.LongVector_at(self, *args)
@@ -160,6 +185,7 @@ class IntVector(_object):
         try: self.this.append(this)
         except: self.this = this
     def push_back(self, *args): return _swigfaiss.IntVector_push_back(self, *args)
+    def clear(self): return _swigfaiss.IntVector_clear(self)
     def data(self): return _swigfaiss.IntVector_data(self)
     def size(self): return _swigfaiss.IntVector_size(self)
     def at(self, *args): return _swigfaiss.IntVector_at(self, *args)
@@ -180,6 +206,7 @@ class VectorTransformVector(_object):
         try: self.this.append(this)
         except: self.this = this
     def push_back(self, *args): return _swigfaiss.VectorTransformVector_push_back(self, *args)
+    def clear(self): return _swigfaiss.VectorTransformVector_clear(self)
     def data(self): return _swigfaiss.VectorTransformVector_data(self)
     def size(self): return _swigfaiss.VectorTransformVector_size(self)
     def at(self, *args): return _swigfaiss.VectorTransformVector_at(self, *args)
@@ -200,6 +227,7 @@ class OperatingPointVector(_object):
         try: self.this.append(this)
         except: self.this = this
     def push_back(self, *args): return _swigfaiss.OperatingPointVector_push_back(self, *args)
+    def clear(self): return _swigfaiss.OperatingPointVector_clear(self)
     def data(self): return _swigfaiss.OperatingPointVector_data(self)
     def size(self): return _swigfaiss.OperatingPointVector_size(self)
     def at(self, *args): return _swigfaiss.OperatingPointVector_at(self, *args)
@@ -208,6 +236,90 @@ class OperatingPointVector(_object):
     __del__ = lambda self : None;
 OperatingPointVector_swigregister = _swigfaiss.OperatingPointVector_swigregister
 OperatingPointVector_swigregister(OperatingPointVector)
+
+class InvertedListsPtrVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, InvertedListsPtrVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, InvertedListsPtrVector, name)
+    __repr__ = _swig_repr
+    def __init__(self): 
+        this = _swigfaiss.new_InvertedListsPtrVector()
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _swigfaiss.InvertedListsPtrVector_push_back(self, *args)
+    def clear(self): return _swigfaiss.InvertedListsPtrVector_clear(self)
+    def data(self): return _swigfaiss.InvertedListsPtrVector_data(self)
+    def size(self): return _swigfaiss.InvertedListsPtrVector_size(self)
+    def at(self, *args): return _swigfaiss.InvertedListsPtrVector_at(self, *args)
+    def resize(self, *args): return _swigfaiss.InvertedListsPtrVector_resize(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_InvertedListsPtrVector
+    __del__ = lambda self : None;
+InvertedListsPtrVector_swigregister = _swigfaiss.InvertedListsPtrVector_swigregister
+InvertedListsPtrVector_swigregister(InvertedListsPtrVector)
+
+class FloatVectorVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, FloatVectorVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, FloatVectorVector, name)
+    __repr__ = _swig_repr
+    def __init__(self): 
+        this = _swigfaiss.new_FloatVectorVector()
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _swigfaiss.FloatVectorVector_push_back(self, *args)
+    def clear(self): return _swigfaiss.FloatVectorVector_clear(self)
+    def data(self): return _swigfaiss.FloatVectorVector_data(self)
+    def size(self): return _swigfaiss.FloatVectorVector_size(self)
+    def at(self, *args): return _swigfaiss.FloatVectorVector_at(self, *args)
+    def resize(self, *args): return _swigfaiss.FloatVectorVector_resize(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_FloatVectorVector
+    __del__ = lambda self : None;
+FloatVectorVector_swigregister = _swigfaiss.FloatVectorVector_swigregister
+FloatVectorVector_swigregister(FloatVectorVector)
+
+class ByteVectorVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ByteVectorVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, ByteVectorVector, name)
+    __repr__ = _swig_repr
+    def __init__(self): 
+        this = _swigfaiss.new_ByteVectorVector()
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _swigfaiss.ByteVectorVector_push_back(self, *args)
+    def clear(self): return _swigfaiss.ByteVectorVector_clear(self)
+    def data(self): return _swigfaiss.ByteVectorVector_data(self)
+    def size(self): return _swigfaiss.ByteVectorVector_size(self)
+    def at(self, *args): return _swigfaiss.ByteVectorVector_at(self, *args)
+    def resize(self, *args): return _swigfaiss.ByteVectorVector_resize(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_ByteVectorVector
+    __del__ = lambda self : None;
+ByteVectorVector_swigregister = _swigfaiss.ByteVectorVector_swigregister
+ByteVectorVector_swigregister(ByteVectorVector)
+
+class LongVectorVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, LongVectorVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, LongVectorVector, name)
+    __repr__ = _swig_repr
+    def __init__(self): 
+        this = _swigfaiss.new_LongVectorVector()
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _swigfaiss.LongVectorVector_push_back(self, *args)
+    def clear(self): return _swigfaiss.LongVectorVector_clear(self)
+    def data(self): return _swigfaiss.LongVectorVector_data(self)
+    def size(self): return _swigfaiss.LongVectorVector_size(self)
+    def at(self, *args): return _swigfaiss.LongVectorVector_at(self, *args)
+    def resize(self, *args): return _swigfaiss.LongVectorVector_resize(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_LongVectorVector
+    __del__ = lambda self : None;
+LongVectorVector_swigregister = _swigfaiss.LongVectorVector_swigregister
+LongVectorVector_swigregister(LongVectorVector)
 
 
 def popcount64(*args):
@@ -401,6 +513,28 @@ class HammingComputer64(_object):
     __del__ = lambda self : None;
 HammingComputer64_swigregister = _swigfaiss.HammingComputer64_swigregister
 HammingComputer64_swigregister(HammingComputer64)
+
+class HammingComputerDefault(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, HammingComputerDefault, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, HammingComputerDefault, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["a"] = _swigfaiss.HammingComputerDefault_a_set
+    __swig_getmethods__["a"] = _swigfaiss.HammingComputerDefault_a_get
+    if _newclass:a = _swig_property(_swigfaiss.HammingComputerDefault_a_get, _swigfaiss.HammingComputerDefault_a_set)
+    __swig_setmethods__["n"] = _swigfaiss.HammingComputerDefault_n_set
+    __swig_getmethods__["n"] = _swigfaiss.HammingComputerDefault_n_get
+    if _newclass:n = _swig_property(_swigfaiss.HammingComputerDefault_n_get, _swigfaiss.HammingComputerDefault_n_set)
+    def __init__(self, *args): 
+        this = _swigfaiss.new_HammingComputerDefault(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def hamming(self, *args): return _swigfaiss.HammingComputerDefault_hamming(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_HammingComputerDefault
+    __del__ = lambda self : None;
+HammingComputerDefault_swigregister = _swigfaiss.HammingComputerDefault_swigregister
+HammingComputerDefault_swigregister(HammingComputerDefault)
 
 class HammingComputerM8(_object):
     __swig_setmethods__ = {}
@@ -705,6 +839,10 @@ def ranklist_intersection_size(*args):
   return _swigfaiss.ranklist_intersection_size(*args)
 ranklist_intersection_size = _swigfaiss.ranklist_intersection_size
 
+def merge_result_table_with(*args):
+  return _swigfaiss.merge_result_table_with(*args)
+merge_result_table_with = _swigfaiss.merge_result_table_with
+
 def fvec_argsort(*args):
   return _swigfaiss.fvec_argsort(*args)
 fvec_argsort = _swigfaiss.fvec_argsort
@@ -724,6 +862,10 @@ bincode_hist = _swigfaiss.bincode_hist
 def ivec_checksum(*args):
   return _swigfaiss.ivec_checksum(*args)
 ivec_checksum = _swigfaiss.ivec_checksum
+
+def fvecs_maybe_subsample(*args):
+  return _swigfaiss.fvecs_maybe_subsample(*args)
+fvecs_maybe_subsample = _swigfaiss.fvecs_maybe_subsample
 METRIC_INNER_PRODUCT = _swigfaiss.METRIC_INNER_PRODUCT
 METRIC_L2 = _swigfaiss.METRIC_L2
 class Index(_object):
@@ -733,9 +875,6 @@ class Index(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, Index, name)
     def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
-    __swig_setmethods__["index_typename"] = _swigfaiss.Index_index_typename_set
-    __swig_getmethods__["index_typename"] = _swigfaiss.Index_index_typename_get
-    if _newclass:index_typename = _swig_property(_swigfaiss.Index_index_typename_get, _swigfaiss.Index_index_typename_set)
     __swig_setmethods__["d"] = _swigfaiss.Index_d_set
     __swig_getmethods__["d"] = _swigfaiss.Index_d_get
     if _newclass:d = _swig_property(_swigfaiss.Index_d_get, _swigfaiss.Index_d_set)
@@ -763,12 +902,12 @@ class Index(_object):
     def remove_ids(self, *args): return _swigfaiss.Index_remove_ids(self, *args)
     def reconstruct(self, *args): return _swigfaiss.Index_reconstruct(self, *args)
     def reconstruct_n(self, *args): return _swigfaiss.Index_reconstruct_n(self, *args)
+    def search_and_reconstruct(self, *args): return _swigfaiss.Index_search_and_reconstruct(self, *args)
     def compute_residual(self, *args): return _swigfaiss.Index_compute_residual(self, *args)
     def display(self): return _swigfaiss.Index_display(self)
-    def get_typename(self): return _swigfaiss.Index_get_typename(self)
-    def set_typename(self): return _swigfaiss.Index_set_typename(self)
 Index_swigregister = _swigfaiss.Index_swigregister
 Index_swigregister(Index)
+cvar = _swigfaiss.cvar
 
 class ClusteringParameters(_object):
     __swig_setmethods__ = {}
@@ -791,6 +930,9 @@ class ClusteringParameters(_object):
     __swig_setmethods__["update_index"] = _swigfaiss.ClusteringParameters_update_index_set
     __swig_getmethods__["update_index"] = _swigfaiss.ClusteringParameters_update_index_get
     if _newclass:update_index = _swig_property(_swigfaiss.ClusteringParameters_update_index_get, _swigfaiss.ClusteringParameters_update_index_set)
+    __swig_setmethods__["frozen_centroids"] = _swigfaiss.ClusteringParameters_frozen_centroids_set
+    __swig_getmethods__["frozen_centroids"] = _swigfaiss.ClusteringParameters_frozen_centroids_get
+    if _newclass:frozen_centroids = _swig_property(_swigfaiss.ClusteringParameters_frozen_centroids_get, _swigfaiss.ClusteringParameters_frozen_centroids_set)
     __swig_setmethods__["min_points_per_centroid"] = _swigfaiss.ClusteringParameters_min_points_per_centroid_set
     __swig_getmethods__["min_points_per_centroid"] = _swigfaiss.ClusteringParameters_min_points_per_centroid_get
     if _newclass:min_points_per_centroid = _swig_property(_swigfaiss.ClusteringParameters_min_points_per_centroid_get, _swigfaiss.ClusteringParameters_min_points_per_centroid_set)
@@ -884,6 +1026,9 @@ class ProductQuantizer(_object):
     __swig_setmethods__["cp"] = _swigfaiss.ProductQuantizer_cp_set
     __swig_getmethods__["cp"] = _swigfaiss.ProductQuantizer_cp_get
     if _newclass:cp = _swig_property(_swigfaiss.ProductQuantizer_cp_get, _swigfaiss.ProductQuantizer_cp_set)
+    __swig_setmethods__["assign_index"] = _swigfaiss.ProductQuantizer_assign_index_set
+    __swig_getmethods__["assign_index"] = _swigfaiss.ProductQuantizer_assign_index_get
+    if _newclass:assign_index = _swig_property(_swigfaiss.ProductQuantizer_assign_index_get, _swigfaiss.ProductQuantizer_assign_index_set)
     __swig_setmethods__["centroids"] = _swigfaiss.ProductQuantizer_centroids_set
     __swig_getmethods__["centroids"] = _swigfaiss.ProductQuantizer_centroids_get
     if _newclass:centroids = _swig_property(_swigfaiss.ProductQuantizer_centroids_get, _swigfaiss.ProductQuantizer_centroids_set)
@@ -951,6 +1096,9 @@ class LinearTransform(VectorTransform):
     __swig_setmethods__["have_bias"] = _swigfaiss.LinearTransform_have_bias_set
     __swig_getmethods__["have_bias"] = _swigfaiss.LinearTransform_have_bias_get
     if _newclass:have_bias = _swig_property(_swigfaiss.LinearTransform_have_bias_get, _swigfaiss.LinearTransform_have_bias_set)
+    __swig_setmethods__["is_orthonormal"] = _swigfaiss.LinearTransform_is_orthonormal_set
+    __swig_getmethods__["is_orthonormal"] = _swigfaiss.LinearTransform_is_orthonormal_get
+    if _newclass:is_orthonormal = _swig_property(_swigfaiss.LinearTransform_is_orthonormal_get, _swigfaiss.LinearTransform_is_orthonormal_set)
     __swig_setmethods__["A"] = _swigfaiss.LinearTransform_A_set
     __swig_getmethods__["A"] = _swigfaiss.LinearTransform_A_get
     if _newclass:A = _swig_property(_swigfaiss.LinearTransform_A_get, _swigfaiss.LinearTransform_A_set)
@@ -963,13 +1111,11 @@ class LinearTransform(VectorTransform):
         except: self.this = this
     def apply_noalloc(self, *args): return _swigfaiss.LinearTransform_apply_noalloc(self, *args)
     def transform_transpose(self, *args): return _swigfaiss.LinearTransform_transform_transpose(self, *args)
-    __swig_setmethods__["max_points_per_d"] = _swigfaiss.LinearTransform_max_points_per_d_set
-    __swig_getmethods__["max_points_per_d"] = _swigfaiss.LinearTransform_max_points_per_d_get
-    if _newclass:max_points_per_d = _swig_property(_swigfaiss.LinearTransform_max_points_per_d_get, _swigfaiss.LinearTransform_max_points_per_d_set)
+    def reverse_transform(self, *args): return _swigfaiss.LinearTransform_reverse_transform(self, *args)
+    def set_is_orthonormal(self): return _swigfaiss.LinearTransform_set_is_orthonormal(self)
     __swig_setmethods__["verbose"] = _swigfaiss.LinearTransform_verbose_set
     __swig_getmethods__["verbose"] = _swigfaiss.LinearTransform_verbose_get
     if _newclass:verbose = _swig_property(_swigfaiss.LinearTransform_verbose_get, _swigfaiss.LinearTransform_verbose_set)
-    def maybe_subsample_train_set(self, *args): return _swigfaiss.LinearTransform_maybe_subsample_train_set(self, *args)
     __swig_destroy__ = _swigfaiss.delete_LinearTransform
     __del__ = lambda self : None;
 LinearTransform_swigregister = _swigfaiss.LinearTransform_swigregister
@@ -984,7 +1130,6 @@ class RandomRotationMatrix(LinearTransform):
     __getattr__ = lambda self, name: _swig_getattr(self, RandomRotationMatrix, name)
     __repr__ = _swig_repr
     def init(self, *args): return _swigfaiss.RandomRotationMatrix_init(self, *args)
-    def reverse_transform(self, *args): return _swigfaiss.RandomRotationMatrix_reverse_transform(self, *args)
     def __init__(self, *args): 
         this = _swigfaiss.new_RandomRotationMatrix(*args)
         try: self.this.append(this)
@@ -1008,6 +1153,9 @@ class PCAMatrix(LinearTransform):
     __swig_setmethods__["random_rotation"] = _swigfaiss.PCAMatrix_random_rotation_set
     __swig_getmethods__["random_rotation"] = _swigfaiss.PCAMatrix_random_rotation_get
     if _newclass:random_rotation = _swig_property(_swigfaiss.PCAMatrix_random_rotation_get, _swigfaiss.PCAMatrix_random_rotation_set)
+    __swig_setmethods__["max_points_per_d"] = _swigfaiss.PCAMatrix_max_points_per_d_set
+    __swig_getmethods__["max_points_per_d"] = _swigfaiss.PCAMatrix_max_points_per_d_get
+    if _newclass:max_points_per_d = _swig_property(_swigfaiss.PCAMatrix_max_points_per_d_get, _swigfaiss.PCAMatrix_max_points_per_d_set)
     __swig_setmethods__["balanced_bins"] = _swigfaiss.PCAMatrix_balanced_bins_set
     __swig_getmethods__["balanced_bins"] = _swigfaiss.PCAMatrix_balanced_bins_get
     if _newclass:balanced_bins = _swig_property(_swigfaiss.PCAMatrix_balanced_bins_get, _swigfaiss.PCAMatrix_balanced_bins_set)
@@ -1025,7 +1173,6 @@ class PCAMatrix(LinearTransform):
         try: self.this.append(this)
         except: self.this = this
     def train(self, *args): return _swigfaiss.PCAMatrix_train(self, *args)
-    def reverse_transform(self, *args): return _swigfaiss.PCAMatrix_reverse_transform(self, *args)
     def copy_from(self, *args): return _swigfaiss.PCAMatrix_copy_from(self, *args)
     def prepare_Ab(self): return _swigfaiss.PCAMatrix_prepare_Ab(self)
     __swig_destroy__ = _swigfaiss.delete_PCAMatrix
@@ -1053,18 +1200,20 @@ class OPQMatrix(LinearTransform):
     __swig_setmethods__["niter_pq_0"] = _swigfaiss.OPQMatrix_niter_pq_0_set
     __swig_getmethods__["niter_pq_0"] = _swigfaiss.OPQMatrix_niter_pq_0_get
     if _newclass:niter_pq_0 = _swig_property(_swigfaiss.OPQMatrix_niter_pq_0_get, _swigfaiss.OPQMatrix_niter_pq_0_set)
-    __swig_setmethods__["max_points_per_d"] = _swigfaiss.OPQMatrix_max_points_per_d_set
-    __swig_getmethods__["max_points_per_d"] = _swigfaiss.OPQMatrix_max_points_per_d_get
-    if _newclass:max_points_per_d = _swig_property(_swigfaiss.OPQMatrix_max_points_per_d_get, _swigfaiss.OPQMatrix_max_points_per_d_set)
+    __swig_setmethods__["max_train_points"] = _swigfaiss.OPQMatrix_max_train_points_set
+    __swig_getmethods__["max_train_points"] = _swigfaiss.OPQMatrix_max_train_points_get
+    if _newclass:max_train_points = _swig_property(_swigfaiss.OPQMatrix_max_train_points_get, _swigfaiss.OPQMatrix_max_train_points_set)
     __swig_setmethods__["verbose"] = _swigfaiss.OPQMatrix_verbose_set
     __swig_getmethods__["verbose"] = _swigfaiss.OPQMatrix_verbose_get
     if _newclass:verbose = _swig_property(_swigfaiss.OPQMatrix_verbose_get, _swigfaiss.OPQMatrix_verbose_set)
+    __swig_setmethods__["pq"] = _swigfaiss.OPQMatrix_pq_set
+    __swig_getmethods__["pq"] = _swigfaiss.OPQMatrix_pq_get
+    if _newclass:pq = _swig_property(_swigfaiss.OPQMatrix_pq_get, _swigfaiss.OPQMatrix_pq_set)
     def __init__(self, *args): 
         this = _swigfaiss.new_OPQMatrix(*args)
         try: self.this.append(this)
         except: self.this = this
     def train(self, *args): return _swigfaiss.OPQMatrix_train(self, *args)
-    def reverse_transform(self, *args): return _swigfaiss.OPQMatrix_reverse_transform(self, *args)
     __swig_destroy__ = _swigfaiss.delete_OPQMatrix
     __del__ = lambda self : None;
 OPQMatrix_swigregister = _swigfaiss.OPQMatrix_swigregister
@@ -1092,6 +1241,28 @@ class RemapDimensionsTransform(VectorTransform):
 RemapDimensionsTransform_swigregister = _swigfaiss.RemapDimensionsTransform_swigregister
 RemapDimensionsTransform_swigregister(RemapDimensionsTransform)
 
+class NormalizationTransform(VectorTransform):
+    __swig_setmethods__ = {}
+    for _s in [VectorTransform]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, NormalizationTransform, name, value)
+    __swig_getmethods__ = {}
+    for _s in [VectorTransform]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, NormalizationTransform, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["norm"] = _swigfaiss.NormalizationTransform_norm_set
+    __swig_getmethods__["norm"] = _swigfaiss.NormalizationTransform_norm_get
+    if _newclass:norm = _swig_property(_swigfaiss.NormalizationTransform_norm_get, _swigfaiss.NormalizationTransform_norm_set)
+    def __init__(self, *args): 
+        this = _swigfaiss.new_NormalizationTransform(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def apply_noalloc(self, *args): return _swigfaiss.NormalizationTransform_apply_noalloc(self, *args)
+    def reverse_transform(self, *args): return _swigfaiss.NormalizationTransform_reverse_transform(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_NormalizationTransform
+    __del__ = lambda self : None;
+NormalizationTransform_swigregister = _swigfaiss.NormalizationTransform_swigregister
+NormalizationTransform_swigregister(NormalizationTransform)
+
 class IndexPreTransform(Index):
     __swig_setmethods__ = {}
     for _s in [Index]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
@@ -1114,15 +1285,17 @@ class IndexPreTransform(Index):
         try: self.this.append(this)
         except: self.this = this
     def prepend_transform(self, *args): return _swigfaiss.IndexPreTransform_prepend_transform(self, *args)
-    def set_typename(self): return _swigfaiss.IndexPreTransform_set_typename(self)
     def train(self, *args): return _swigfaiss.IndexPreTransform_train(self, *args)
     def add(self, *args): return _swigfaiss.IndexPreTransform_add(self, *args)
     def add_with_ids(self, *args): return _swigfaiss.IndexPreTransform_add_with_ids(self, *args)
     def reset(self): return _swigfaiss.IndexPreTransform_reset(self)
     def remove_ids(self, *args): return _swigfaiss.IndexPreTransform_remove_ids(self, *args)
     def search(self, *args): return _swigfaiss.IndexPreTransform_search(self, *args)
+    def reconstruct(self, *args): return _swigfaiss.IndexPreTransform_reconstruct(self, *args)
     def reconstruct_n(self, *args): return _swigfaiss.IndexPreTransform_reconstruct_n(self, *args)
+    def search_and_reconstruct(self, *args): return _swigfaiss.IndexPreTransform_search_and_reconstruct(self, *args)
     def apply_chain(self, *args): return _swigfaiss.IndexPreTransform_apply_chain(self, *args)
+    def reverse_chain(self, *args): return _swigfaiss.IndexPreTransform_reverse_chain(self, *args)
     __swig_destroy__ = _swigfaiss.delete_IndexPreTransform
     __del__ = lambda self : None;
 IndexPreTransform_swigregister = _swigfaiss.IndexPreTransform_swigregister
@@ -1139,13 +1312,13 @@ class IndexFlat(Index):
     __swig_setmethods__["xb"] = _swigfaiss.IndexFlat_xb_set
     __swig_getmethods__["xb"] = _swigfaiss.IndexFlat_xb_get
     if _newclass:xb = _swig_property(_swigfaiss.IndexFlat_xb_get, _swigfaiss.IndexFlat_xb_set)
-    def set_typename(self): return _swigfaiss.IndexFlat_set_typename(self)
     def add(self, *args): return _swigfaiss.IndexFlat_add(self, *args)
     def reset(self): return _swigfaiss.IndexFlat_reset(self)
     def search(self, *args): return _swigfaiss.IndexFlat_search(self, *args)
     def range_search(self, *args): return _swigfaiss.IndexFlat_range_search(self, *args)
     def reconstruct(self, *args): return _swigfaiss.IndexFlat_reconstruct(self, *args)
     def compute_distance_subset(self, *args): return _swigfaiss.IndexFlat_compute_distance_subset(self, *args)
+    def remove_ids(self, *args): return _swigfaiss.IndexFlat_remove_ids(self, *args)
     def __init__(self, *args): 
         this = _swigfaiss.new_IndexFlat(*args)
         try: self.this.append(this)
@@ -1238,7 +1411,6 @@ class IndexRefineFlat(Index):
     def add(self, *args): return _swigfaiss.IndexRefineFlat_add(self, *args)
     def reset(self): return _swigfaiss.IndexRefineFlat_reset(self)
     def search(self, *args): return _swigfaiss.IndexRefineFlat_search(self, *args)
-    def set_typename(self): return _swigfaiss.IndexRefineFlat_set_typename(self)
     __swig_destroy__ = _swigfaiss.delete_IndexRefineFlat
     __del__ = lambda self : None;
 IndexRefineFlat_swigregister = _swigfaiss.IndexRefineFlat_swigregister
@@ -1301,7 +1473,6 @@ class IndexLSH(Index):
     __swig_getmethods__["codes"] = _swigfaiss.IndexLSH_codes_get
     if _newclass:codes = _swig_property(_swigfaiss.IndexLSH_codes_get, _swigfaiss.IndexLSH_codes_set)
     def apply_preprocess(self, *args): return _swigfaiss.IndexLSH_apply_preprocess(self, *args)
-    def set_typename(self): return _swigfaiss.IndexLSH_set_typename(self)
     def train(self, *args): return _swigfaiss.IndexLSH_train(self, *args)
     def add(self, *args): return _swigfaiss.IndexLSH_add(self, *args)
     def search(self, *args): return _swigfaiss.IndexLSH_search(self, *args)
@@ -1505,7 +1676,6 @@ class IndexPQ(Index):
         this = _swigfaiss.new_IndexPQ(*args)
         try: self.this.append(this)
         except: self.this = this
-    def set_typename(self): return _swigfaiss.IndexPQ_set_typename(self)
     def train(self, *args): return _swigfaiss.IndexPQ_train(self, *args)
     def add(self, *args): return _swigfaiss.IndexPQ_add(self, *args)
     def search(self, *args): return _swigfaiss.IndexPQ_search(self, *args)
@@ -1577,7 +1747,6 @@ class MultiIndexQuantizer(Index):
     __swig_setmethods__["pq"] = _swigfaiss.MultiIndexQuantizer_pq_set
     __swig_getmethods__["pq"] = _swigfaiss.MultiIndexQuantizer_pq_get
     if _newclass:pq = _swig_property(_swigfaiss.MultiIndexQuantizer_pq_get, _swigfaiss.MultiIndexQuantizer_pq_set)
-    def set_typename(self): return _swigfaiss.MultiIndexQuantizer_set_typename(self)
     def train(self, *args): return _swigfaiss.MultiIndexQuantizer_train(self, *args)
     def search(self, *args): return _swigfaiss.MultiIndexQuantizer_search(self, *args)
     def add(self, *args): return _swigfaiss.MultiIndexQuantizer_add(self, *args)
@@ -1591,38 +1760,149 @@ class MultiIndexQuantizer(Index):
     __del__ = lambda self : None;
 MultiIndexQuantizer_swigregister = _swigfaiss.MultiIndexQuantizer_swigregister
 MultiIndexQuantizer_swigregister(MultiIndexQuantizer)
-cvar = _swigfaiss.cvar
 
-class IndexIVF(Index):
+class MultiIndexQuantizer2(MultiIndexQuantizer):
     __swig_setmethods__ = {}
-    for _s in [Index]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    for _s in [MultiIndexQuantizer]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, MultiIndexQuantizer2, name, value)
+    __swig_getmethods__ = {}
+    for _s in [MultiIndexQuantizer]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, MultiIndexQuantizer2, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["assign_indexes"] = _swigfaiss.MultiIndexQuantizer2_assign_indexes_set
+    __swig_getmethods__["assign_indexes"] = _swigfaiss.MultiIndexQuantizer2_assign_indexes_get
+    if _newclass:assign_indexes = _swig_property(_swigfaiss.MultiIndexQuantizer2_assign_indexes_get, _swigfaiss.MultiIndexQuantizer2_assign_indexes_set)
+    __swig_setmethods__["own_fields"] = _swigfaiss.MultiIndexQuantizer2_own_fields_set
+    __swig_getmethods__["own_fields"] = _swigfaiss.MultiIndexQuantizer2_own_fields_get
+    if _newclass:own_fields = _swig_property(_swigfaiss.MultiIndexQuantizer2_own_fields_get, _swigfaiss.MultiIndexQuantizer2_own_fields_set)
+    def __init__(self, *args): 
+        this = _swigfaiss.new_MultiIndexQuantizer2(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def train(self, *args): return _swigfaiss.MultiIndexQuantizer2_train(self, *args)
+    def search(self, *args): return _swigfaiss.MultiIndexQuantizer2_search(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_MultiIndexQuantizer2
+    __del__ = lambda self : None;
+MultiIndexQuantizer2_swigregister = _swigfaiss.MultiIndexQuantizer2_swigregister
+MultiIndexQuantizer2_swigregister(MultiIndexQuantizer2)
+
+class Level1Quantizer(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Level1Quantizer, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Level1Quantizer, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["quantizer"] = _swigfaiss.Level1Quantizer_quantizer_set
+    __swig_getmethods__["quantizer"] = _swigfaiss.Level1Quantizer_quantizer_get
+    if _newclass:quantizer = _swig_property(_swigfaiss.Level1Quantizer_quantizer_get, _swigfaiss.Level1Quantizer_quantizer_set)
+    __swig_setmethods__["nlist"] = _swigfaiss.Level1Quantizer_nlist_set
+    __swig_getmethods__["nlist"] = _swigfaiss.Level1Quantizer_nlist_get
+    if _newclass:nlist = _swig_property(_swigfaiss.Level1Quantizer_nlist_get, _swigfaiss.Level1Quantizer_nlist_set)
+    __swig_setmethods__["quantizer_trains_alone"] = _swigfaiss.Level1Quantizer_quantizer_trains_alone_set
+    __swig_getmethods__["quantizer_trains_alone"] = _swigfaiss.Level1Quantizer_quantizer_trains_alone_get
+    if _newclass:quantizer_trains_alone = _swig_property(_swigfaiss.Level1Quantizer_quantizer_trains_alone_get, _swigfaiss.Level1Quantizer_quantizer_trains_alone_set)
+    __swig_setmethods__["own_fields"] = _swigfaiss.Level1Quantizer_own_fields_set
+    __swig_getmethods__["own_fields"] = _swigfaiss.Level1Quantizer_own_fields_get
+    if _newclass:own_fields = _swig_property(_swigfaiss.Level1Quantizer_own_fields_get, _swigfaiss.Level1Quantizer_own_fields_set)
+    __swig_setmethods__["cp"] = _swigfaiss.Level1Quantizer_cp_set
+    __swig_getmethods__["cp"] = _swigfaiss.Level1Quantizer_cp_get
+    if _newclass:cp = _swig_property(_swigfaiss.Level1Quantizer_cp_get, _swigfaiss.Level1Quantizer_cp_set)
+    __swig_setmethods__["clustering_index"] = _swigfaiss.Level1Quantizer_clustering_index_set
+    __swig_getmethods__["clustering_index"] = _swigfaiss.Level1Quantizer_clustering_index_get
+    if _newclass:clustering_index = _swig_property(_swigfaiss.Level1Quantizer_clustering_index_get, _swigfaiss.Level1Quantizer_clustering_index_set)
+    def train_q1(self, *args): return _swigfaiss.Level1Quantizer_train_q1(self, *args)
+    def __init__(self, *args): 
+        this = _swigfaiss.new_Level1Quantizer(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _swigfaiss.delete_Level1Quantizer
+    __del__ = lambda self : None;
+Level1Quantizer_swigregister = _swigfaiss.Level1Quantizer_swigregister
+Level1Quantizer_swigregister(Level1Quantizer)
+
+class InvertedLists(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, InvertedLists, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, InvertedLists, name)
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    __swig_setmethods__["nlist"] = _swigfaiss.InvertedLists_nlist_set
+    __swig_getmethods__["nlist"] = _swigfaiss.InvertedLists_nlist_get
+    if _newclass:nlist = _swig_property(_swigfaiss.InvertedLists_nlist_get, _swigfaiss.InvertedLists_nlist_set)
+    __swig_setmethods__["code_size"] = _swigfaiss.InvertedLists_code_size_set
+    __swig_getmethods__["code_size"] = _swigfaiss.InvertedLists_code_size_get
+    if _newclass:code_size = _swig_property(_swigfaiss.InvertedLists_code_size_get, _swigfaiss.InvertedLists_code_size_set)
+    def list_size(self, *args): return _swigfaiss.InvertedLists_list_size(self, *args)
+    def get_codes(self, *args): return _swigfaiss.InvertedLists_get_codes(self, *args)
+    def get_ids(self, *args): return _swigfaiss.InvertedLists_get_ids(self, *args)
+    def get_single_id(self, *args): return _swigfaiss.InvertedLists_get_single_id(self, *args)
+    def get_single_code(self, *args): return _swigfaiss.InvertedLists_get_single_code(self, *args)
+    def prefetch_lists(self, *args): return _swigfaiss.InvertedLists_prefetch_lists(self, *args)
+    def add_entry(self, *args): return _swigfaiss.InvertedLists_add_entry(self, *args)
+    def add_entries(self, *args): return _swigfaiss.InvertedLists_add_entries(self, *args)
+    def update_entry(self, *args): return _swigfaiss.InvertedLists_update_entry(self, *args)
+    def update_entries(self, *args): return _swigfaiss.InvertedLists_update_entries(self, *args)
+    def resize(self, *args): return _swigfaiss.InvertedLists_resize(self, *args)
+    def reset(self): return _swigfaiss.InvertedLists_reset(self)
+    __swig_destroy__ = _swigfaiss.delete_InvertedLists
+    __del__ = lambda self : None;
+InvertedLists_swigregister = _swigfaiss.InvertedLists_swigregister
+InvertedLists_swigregister(InvertedLists)
+
+class ArrayInvertedLists(InvertedLists):
+    __swig_setmethods__ = {}
+    for _s in [InvertedLists]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ArrayInvertedLists, name, value)
+    __swig_getmethods__ = {}
+    for _s in [InvertedLists]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, ArrayInvertedLists, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["codes"] = _swigfaiss.ArrayInvertedLists_codes_set
+    __swig_getmethods__["codes"] = _swigfaiss.ArrayInvertedLists_codes_get
+    if _newclass:codes = _swig_property(_swigfaiss.ArrayInvertedLists_codes_get, _swigfaiss.ArrayInvertedLists_codes_set)
+    __swig_setmethods__["ids"] = _swigfaiss.ArrayInvertedLists_ids_set
+    __swig_getmethods__["ids"] = _swigfaiss.ArrayInvertedLists_ids_get
+    if _newclass:ids = _swig_property(_swigfaiss.ArrayInvertedLists_ids_get, _swigfaiss.ArrayInvertedLists_ids_set)
+    def __init__(self, *args): 
+        this = _swigfaiss.new_ArrayInvertedLists(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def list_size(self, *args): return _swigfaiss.ArrayInvertedLists_list_size(self, *args)
+    def get_codes(self, *args): return _swigfaiss.ArrayInvertedLists_get_codes(self, *args)
+    def get_ids(self, *args): return _swigfaiss.ArrayInvertedLists_get_ids(self, *args)
+    def add_entries(self, *args): return _swigfaiss.ArrayInvertedLists_add_entries(self, *args)
+    def update_entries(self, *args): return _swigfaiss.ArrayInvertedLists_update_entries(self, *args)
+    def resize(self, *args): return _swigfaiss.ArrayInvertedLists_resize(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_ArrayInvertedLists
+    __del__ = lambda self : None;
+ArrayInvertedLists_swigregister = _swigfaiss.ArrayInvertedLists_swigregister
+ArrayInvertedLists_swigregister(ArrayInvertedLists)
+
+class IndexIVF(Index,Level1Quantizer):
+    __swig_setmethods__ = {}
+    for _s in [Index,Level1Quantizer]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, IndexIVF, name, value)
     __swig_getmethods__ = {}
-    for _s in [Index]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    for _s in [Index,Level1Quantizer]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, IndexIVF, name)
     def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
-    __swig_setmethods__["nlist"] = _swigfaiss.IndexIVF_nlist_set
-    __swig_getmethods__["nlist"] = _swigfaiss.IndexIVF_nlist_get
-    if _newclass:nlist = _swig_property(_swigfaiss.IndexIVF_nlist_get, _swigfaiss.IndexIVF_nlist_set)
+    __swig_setmethods__["invlists"] = _swigfaiss.IndexIVF_invlists_set
+    __swig_getmethods__["invlists"] = _swigfaiss.IndexIVF_invlists_get
+    if _newclass:invlists = _swig_property(_swigfaiss.IndexIVF_invlists_get, _swigfaiss.IndexIVF_invlists_set)
+    __swig_setmethods__["own_invlists"] = _swigfaiss.IndexIVF_own_invlists_set
+    __swig_getmethods__["own_invlists"] = _swigfaiss.IndexIVF_own_invlists_get
+    if _newclass:own_invlists = _swig_property(_swigfaiss.IndexIVF_own_invlists_get, _swigfaiss.IndexIVF_own_invlists_set)
+    __swig_setmethods__["code_size"] = _swigfaiss.IndexIVF_code_size_set
+    __swig_getmethods__["code_size"] = _swigfaiss.IndexIVF_code_size_get
+    if _newclass:code_size = _swig_property(_swigfaiss.IndexIVF_code_size_get, _swigfaiss.IndexIVF_code_size_set)
     __swig_setmethods__["nprobe"] = _swigfaiss.IndexIVF_nprobe_set
     __swig_getmethods__["nprobe"] = _swigfaiss.IndexIVF_nprobe_get
     if _newclass:nprobe = _swig_property(_swigfaiss.IndexIVF_nprobe_get, _swigfaiss.IndexIVF_nprobe_set)
-    __swig_setmethods__["quantizer"] = _swigfaiss.IndexIVF_quantizer_set
-    __swig_getmethods__["quantizer"] = _swigfaiss.IndexIVF_quantizer_get
-    if _newclass:quantizer = _swig_property(_swigfaiss.IndexIVF_quantizer_get, _swigfaiss.IndexIVF_quantizer_set)
-    __swig_setmethods__["quantizer_trains_alone"] = _swigfaiss.IndexIVF_quantizer_trains_alone_set
-    __swig_getmethods__["quantizer_trains_alone"] = _swigfaiss.IndexIVF_quantizer_trains_alone_get
-    if _newclass:quantizer_trains_alone = _swig_property(_swigfaiss.IndexIVF_quantizer_trains_alone_get, _swigfaiss.IndexIVF_quantizer_trains_alone_set)
-    __swig_setmethods__["own_fields"] = _swigfaiss.IndexIVF_own_fields_set
-    __swig_getmethods__["own_fields"] = _swigfaiss.IndexIVF_own_fields_get
-    if _newclass:own_fields = _swig_property(_swigfaiss.IndexIVF_own_fields_get, _swigfaiss.IndexIVF_own_fields_set)
-    __swig_setmethods__["cp"] = _swigfaiss.IndexIVF_cp_set
-    __swig_getmethods__["cp"] = _swigfaiss.IndexIVF_cp_get
-    if _newclass:cp = _swig_property(_swigfaiss.IndexIVF_cp_get, _swigfaiss.IndexIVF_cp_set)
-    __swig_setmethods__["ids"] = _swigfaiss.IndexIVF_ids_set
-    __swig_getmethods__["ids"] = _swigfaiss.IndexIVF_ids_get
-    if _newclass:ids = _swig_property(_swigfaiss.IndexIVF_ids_get, _swigfaiss.IndexIVF_ids_set)
+    __swig_setmethods__["max_codes"] = _swigfaiss.IndexIVF_max_codes_set
+    __swig_getmethods__["max_codes"] = _swigfaiss.IndexIVF_max_codes_get
+    if _newclass:max_codes = _swig_property(_swigfaiss.IndexIVF_max_codes_get, _swigfaiss.IndexIVF_max_codes_set)
     __swig_setmethods__["maintain_direct_map"] = _swigfaiss.IndexIVF_maintain_direct_map_set
     __swig_getmethods__["maintain_direct_map"] = _swigfaiss.IndexIVF_maintain_direct_map_get
     if _newclass:maintain_direct_map = _swig_property(_swigfaiss.IndexIVF_maintain_direct_map_get, _swigfaiss.IndexIVF_maintain_direct_map_set)
@@ -1633,15 +1913,413 @@ class IndexIVF(Index):
     def train(self, *args): return _swigfaiss.IndexIVF_train(self, *args)
     def add(self, *args): return _swigfaiss.IndexIVF_add(self, *args)
     def train_residual(self, *args): return _swigfaiss.IndexIVF_train_residual(self, *args)
+    def search_preassigned(self, *args): return _swigfaiss.IndexIVF_search_preassigned(self, *args)
+    def search(self, *args): return _swigfaiss.IndexIVF_search(self, *args)
+    def reconstruct(self, *args): return _swigfaiss.IndexIVF_reconstruct(self, *args)
+    def reconstruct_n(self, *args): return _swigfaiss.IndexIVF_reconstruct_n(self, *args)
+    def search_and_reconstruct(self, *args): return _swigfaiss.IndexIVF_search_and_reconstruct(self, *args)
+    def reconstruct_from_offset(self, *args): return _swigfaiss.IndexIVF_reconstruct_from_offset(self, *args)
+    def remove_ids(self, *args): return _swigfaiss.IndexIVF_remove_ids(self, *args)
     def merge_from(self, *args): return _swigfaiss.IndexIVF_merge_from(self, *args)
-    def merge_from_residuals(self, *args): return _swigfaiss.IndexIVF_merge_from_residuals(self, *args)
+    def copy_subset_to(self, *args): return _swigfaiss.IndexIVF_copy_subset_to(self, *args)
     __swig_destroy__ = _swigfaiss.delete_IndexIVF
     __del__ = lambda self : None;
-    def make_direct_map(self): return _swigfaiss.IndexIVF_make_direct_map(self)
+    def get_list_size(self, *args): return _swigfaiss.IndexIVF_get_list_size(self, *args)
+    def make_direct_map(self, new_maintain_direct_map=True): return _swigfaiss.IndexIVF_make_direct_map(self, new_maintain_direct_map)
     def imbalance_factor(self): return _swigfaiss.IndexIVF_imbalance_factor(self)
     def print_stats(self): return _swigfaiss.IndexIVF_print_stats(self)
+    def replace_invlists(self, *args): return _swigfaiss.IndexIVF_replace_invlists(self, *args)
 IndexIVF_swigregister = _swigfaiss.IndexIVF_swigregister
 IndexIVF_swigregister(IndexIVF)
+
+class IndexIVFStats(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IndexIVFStats, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, IndexIVFStats, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["nq"] = _swigfaiss.IndexIVFStats_nq_set
+    __swig_getmethods__["nq"] = _swigfaiss.IndexIVFStats_nq_get
+    if _newclass:nq = _swig_property(_swigfaiss.IndexIVFStats_nq_get, _swigfaiss.IndexIVFStats_nq_set)
+    __swig_setmethods__["nlist"] = _swigfaiss.IndexIVFStats_nlist_set
+    __swig_getmethods__["nlist"] = _swigfaiss.IndexIVFStats_nlist_get
+    if _newclass:nlist = _swig_property(_swigfaiss.IndexIVFStats_nlist_get, _swigfaiss.IndexIVFStats_nlist_set)
+    __swig_setmethods__["ndis"] = _swigfaiss.IndexIVFStats_ndis_set
+    __swig_getmethods__["ndis"] = _swigfaiss.IndexIVFStats_ndis_get
+    if _newclass:ndis = _swig_property(_swigfaiss.IndexIVFStats_ndis_get, _swigfaiss.IndexIVFStats_ndis_set)
+    def __init__(self): 
+        this = _swigfaiss.new_IndexIVFStats()
+        try: self.this.append(this)
+        except: self.this = this
+    def reset(self): return _swigfaiss.IndexIVFStats_reset(self)
+    __swig_destroy__ = _swigfaiss.delete_IndexIVFStats
+    __del__ = lambda self : None;
+IndexIVFStats_swigregister = _swigfaiss.IndexIVFStats_swigregister
+IndexIVFStats_swigregister(IndexIVFStats)
+
+class ScalarQuantizer(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ScalarQuantizer, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, ScalarQuantizer, name)
+    __repr__ = _swig_repr
+    QT_8bit = _swigfaiss.ScalarQuantizer_QT_8bit
+    QT_4bit = _swigfaiss.ScalarQuantizer_QT_4bit
+    QT_8bit_uniform = _swigfaiss.ScalarQuantizer_QT_8bit_uniform
+    QT_4bit_uniform = _swigfaiss.ScalarQuantizer_QT_4bit_uniform
+    __swig_setmethods__["qtype"] = _swigfaiss.ScalarQuantizer_qtype_set
+    __swig_getmethods__["qtype"] = _swigfaiss.ScalarQuantizer_qtype_get
+    if _newclass:qtype = _swig_property(_swigfaiss.ScalarQuantizer_qtype_get, _swigfaiss.ScalarQuantizer_qtype_set)
+    RS_minmax = _swigfaiss.ScalarQuantizer_RS_minmax
+    RS_meanstd = _swigfaiss.ScalarQuantizer_RS_meanstd
+    RS_quantiles = _swigfaiss.ScalarQuantizer_RS_quantiles
+    RS_optim = _swigfaiss.ScalarQuantizer_RS_optim
+    __swig_setmethods__["rangestat"] = _swigfaiss.ScalarQuantizer_rangestat_set
+    __swig_getmethods__["rangestat"] = _swigfaiss.ScalarQuantizer_rangestat_get
+    if _newclass:rangestat = _swig_property(_swigfaiss.ScalarQuantizer_rangestat_get, _swigfaiss.ScalarQuantizer_rangestat_set)
+    __swig_setmethods__["rangestat_arg"] = _swigfaiss.ScalarQuantizer_rangestat_arg_set
+    __swig_getmethods__["rangestat_arg"] = _swigfaiss.ScalarQuantizer_rangestat_arg_get
+    if _newclass:rangestat_arg = _swig_property(_swigfaiss.ScalarQuantizer_rangestat_arg_get, _swigfaiss.ScalarQuantizer_rangestat_arg_set)
+    __swig_setmethods__["d"] = _swigfaiss.ScalarQuantizer_d_set
+    __swig_getmethods__["d"] = _swigfaiss.ScalarQuantizer_d_get
+    if _newclass:d = _swig_property(_swigfaiss.ScalarQuantizer_d_get, _swigfaiss.ScalarQuantizer_d_set)
+    __swig_setmethods__["code_size"] = _swigfaiss.ScalarQuantizer_code_size_set
+    __swig_getmethods__["code_size"] = _swigfaiss.ScalarQuantizer_code_size_get
+    if _newclass:code_size = _swig_property(_swigfaiss.ScalarQuantizer_code_size_get, _swigfaiss.ScalarQuantizer_code_size_set)
+    __swig_setmethods__["trained"] = _swigfaiss.ScalarQuantizer_trained_set
+    __swig_getmethods__["trained"] = _swigfaiss.ScalarQuantizer_trained_get
+    if _newclass:trained = _swig_property(_swigfaiss.ScalarQuantizer_trained_get, _swigfaiss.ScalarQuantizer_trained_set)
+    def __init__(self, *args): 
+        this = _swigfaiss.new_ScalarQuantizer(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def train(self, *args): return _swigfaiss.ScalarQuantizer_train(self, *args)
+    def compute_codes(self, *args): return _swigfaiss.ScalarQuantizer_compute_codes(self, *args)
+    def decode(self, *args): return _swigfaiss.ScalarQuantizer_decode(self, *args)
+    def get_distance_computer(self, *args): return _swigfaiss.ScalarQuantizer_get_distance_computer(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_ScalarQuantizer
+    __del__ = lambda self : None;
+ScalarQuantizer_swigregister = _swigfaiss.ScalarQuantizer_swigregister
+ScalarQuantizer_swigregister(ScalarQuantizer)
+
+class IndexScalarQuantizer(Index):
+    __swig_setmethods__ = {}
+    for _s in [Index]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IndexScalarQuantizer, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Index]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, IndexScalarQuantizer, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["sq"] = _swigfaiss.IndexScalarQuantizer_sq_set
+    __swig_getmethods__["sq"] = _swigfaiss.IndexScalarQuantizer_sq_get
+    if _newclass:sq = _swig_property(_swigfaiss.IndexScalarQuantizer_sq_get, _swigfaiss.IndexScalarQuantizer_sq_set)
+    __swig_setmethods__["codes"] = _swigfaiss.IndexScalarQuantizer_codes_set
+    __swig_getmethods__["codes"] = _swigfaiss.IndexScalarQuantizer_codes_get
+    if _newclass:codes = _swig_property(_swigfaiss.IndexScalarQuantizer_codes_get, _swigfaiss.IndexScalarQuantizer_codes_set)
+    __swig_setmethods__["code_size"] = _swigfaiss.IndexScalarQuantizer_code_size_set
+    __swig_getmethods__["code_size"] = _swigfaiss.IndexScalarQuantizer_code_size_get
+    if _newclass:code_size = _swig_property(_swigfaiss.IndexScalarQuantizer_code_size_get, _swigfaiss.IndexScalarQuantizer_code_size_set)
+    def __init__(self, *args): 
+        this = _swigfaiss.new_IndexScalarQuantizer(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def train(self, *args): return _swigfaiss.IndexScalarQuantizer_train(self, *args)
+    def add(self, *args): return _swigfaiss.IndexScalarQuantizer_add(self, *args)
+    def search(self, *args): return _swigfaiss.IndexScalarQuantizer_search(self, *args)
+    def reset(self): return _swigfaiss.IndexScalarQuantizer_reset(self)
+    def reconstruct_n(self, *args): return _swigfaiss.IndexScalarQuantizer_reconstruct_n(self, *args)
+    def reconstruct(self, *args): return _swigfaiss.IndexScalarQuantizer_reconstruct(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_IndexScalarQuantizer
+    __del__ = lambda self : None;
+IndexScalarQuantizer_swigregister = _swigfaiss.IndexScalarQuantizer_swigregister
+IndexScalarQuantizer_swigregister(IndexScalarQuantizer)
+
+class IndexIVFScalarQuantizer(IndexIVF):
+    __swig_setmethods__ = {}
+    for _s in [IndexIVF]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IndexIVFScalarQuantizer, name, value)
+    __swig_getmethods__ = {}
+    for _s in [IndexIVF]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, IndexIVFScalarQuantizer, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["sq"] = _swigfaiss.IndexIVFScalarQuantizer_sq_set
+    __swig_getmethods__["sq"] = _swigfaiss.IndexIVFScalarQuantizer_sq_get
+    if _newclass:sq = _swig_property(_swigfaiss.IndexIVFScalarQuantizer_sq_get, _swigfaiss.IndexIVFScalarQuantizer_sq_set)
+    def __init__(self, *args): 
+        this = _swigfaiss.new_IndexIVFScalarQuantizer(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def train_residual(self, *args): return _swigfaiss.IndexIVFScalarQuantizer_train_residual(self, *args)
+    def add_with_ids(self, *args): return _swigfaiss.IndexIVFScalarQuantizer_add_with_ids(self, *args)
+    def search_preassigned(self, *args): return _swigfaiss.IndexIVFScalarQuantizer_search_preassigned(self, *args)
+    def reconstruct_from_offset(self, *args): return _swigfaiss.IndexIVFScalarQuantizer_reconstruct_from_offset(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_IndexIVFScalarQuantizer
+    __del__ = lambda self : None;
+IndexIVFScalarQuantizer_swigregister = _swigfaiss.IndexIVFScalarQuantizer_swigregister
+IndexIVFScalarQuantizer_swigregister(IndexIVFScalarQuantizer)
+
+class HNSW(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, HNSW, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, HNSW, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["assign_probas"] = _swigfaiss.HNSW_assign_probas_set
+    __swig_getmethods__["assign_probas"] = _swigfaiss.HNSW_assign_probas_get
+    if _newclass:assign_probas = _swig_property(_swigfaiss.HNSW_assign_probas_get, _swigfaiss.HNSW_assign_probas_set)
+    __swig_setmethods__["cum_nneighbor_per_level"] = _swigfaiss.HNSW_cum_nneighbor_per_level_set
+    __swig_getmethods__["cum_nneighbor_per_level"] = _swigfaiss.HNSW_cum_nneighbor_per_level_get
+    if _newclass:cum_nneighbor_per_level = _swig_property(_swigfaiss.HNSW_cum_nneighbor_per_level_get, _swigfaiss.HNSW_cum_nneighbor_per_level_set)
+    __swig_setmethods__["levels"] = _swigfaiss.HNSW_levels_set
+    __swig_getmethods__["levels"] = _swigfaiss.HNSW_levels_get
+    if _newclass:levels = _swig_property(_swigfaiss.HNSW_levels_get, _swigfaiss.HNSW_levels_set)
+    __swig_setmethods__["offsets"] = _swigfaiss.HNSW_offsets_set
+    __swig_getmethods__["offsets"] = _swigfaiss.HNSW_offsets_get
+    if _newclass:offsets = _swig_property(_swigfaiss.HNSW_offsets_get, _swigfaiss.HNSW_offsets_set)
+    __swig_setmethods__["neighbors"] = _swigfaiss.HNSW_neighbors_set
+    __swig_getmethods__["neighbors"] = _swigfaiss.HNSW_neighbors_get
+    if _newclass:neighbors = _swig_property(_swigfaiss.HNSW_neighbors_get, _swigfaiss.HNSW_neighbors_set)
+    __swig_setmethods__["entry_point"] = _swigfaiss.HNSW_entry_point_set
+    __swig_getmethods__["entry_point"] = _swigfaiss.HNSW_entry_point_get
+    if _newclass:entry_point = _swig_property(_swigfaiss.HNSW_entry_point_get, _swigfaiss.HNSW_entry_point_set)
+    __swig_setmethods__["rng"] = _swigfaiss.HNSW_rng_set
+    __swig_getmethods__["rng"] = _swigfaiss.HNSW_rng_get
+    if _newclass:rng = _swig_property(_swigfaiss.HNSW_rng_get, _swigfaiss.HNSW_rng_set)
+    __swig_setmethods__["max_level"] = _swigfaiss.HNSW_max_level_set
+    __swig_getmethods__["max_level"] = _swigfaiss.HNSW_max_level_get
+    if _newclass:max_level = _swig_property(_swigfaiss.HNSW_max_level_get, _swigfaiss.HNSW_max_level_set)
+    __swig_setmethods__["efConstruction"] = _swigfaiss.HNSW_efConstruction_set
+    __swig_getmethods__["efConstruction"] = _swigfaiss.HNSW_efConstruction_get
+    if _newclass:efConstruction = _swig_property(_swigfaiss.HNSW_efConstruction_get, _swigfaiss.HNSW_efConstruction_set)
+    __swig_setmethods__["efSearch"] = _swigfaiss.HNSW_efSearch_set
+    __swig_getmethods__["efSearch"] = _swigfaiss.HNSW_efSearch_get
+    if _newclass:efSearch = _swig_property(_swigfaiss.HNSW_efSearch_get, _swigfaiss.HNSW_efSearch_set)
+    __swig_setmethods__["check_relative_distance"] = _swigfaiss.HNSW_check_relative_distance_set
+    __swig_getmethods__["check_relative_distance"] = _swigfaiss.HNSW_check_relative_distance_get
+    if _newclass:check_relative_distance = _swig_property(_swigfaiss.HNSW_check_relative_distance_get, _swigfaiss.HNSW_check_relative_distance_set)
+    __swig_setmethods__["upper_beam"] = _swigfaiss.HNSW_upper_beam_set
+    __swig_getmethods__["upper_beam"] = _swigfaiss.HNSW_upper_beam_get
+    if _newclass:upper_beam = _swig_property(_swigfaiss.HNSW_upper_beam_get, _swigfaiss.HNSW_upper_beam_set)
+    def set_default_probas(self, *args): return _swigfaiss.HNSW_set_default_probas(self, *args)
+    def set_nb_neighbors(self, *args): return _swigfaiss.HNSW_set_nb_neighbors(self, *args)
+    def nb_neighbors(self, *args): return _swigfaiss.HNSW_nb_neighbors(self, *args)
+    def cum_nb_neighbors(self, *args): return _swigfaiss.HNSW_cum_nb_neighbors(self, *args)
+    def neighbor_range(self, *args): return _swigfaiss.HNSW_neighbor_range(self, *args)
+    def __init__(self, M=32): 
+        this = _swigfaiss.new_HNSW(M)
+        try: self.this.append(this)
+        except: self.this = this
+    def random_level(self): return _swigfaiss.HNSW_random_level(self)
+    def fill_with_random_links(self, *args): return _swigfaiss.HNSW_fill_with_random_links(self, *args)
+    def add_with_locks(self, *args): return _swigfaiss.HNSW_add_with_locks(self, *args)
+    def search(self, *args): return _swigfaiss.HNSW_search(self, *args)
+    def reset(self): return _swigfaiss.HNSW_reset(self)
+    def clear_neighbor_tables(self, *args): return _swigfaiss.HNSW_clear_neighbor_tables(self, *args)
+    def print_neighbor_stats(self, *args): return _swigfaiss.HNSW_print_neighbor_stats(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_HNSW
+    __del__ = lambda self : None;
+HNSW_swigregister = _swigfaiss.HNSW_swigregister
+HNSW_swigregister(HNSW)
+
+class HNSWStats(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, HNSWStats, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, HNSWStats, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["n1"] = _swigfaiss.HNSWStats_n1_set
+    __swig_getmethods__["n1"] = _swigfaiss.HNSWStats_n1_get
+    if _newclass:n1 = _swig_property(_swigfaiss.HNSWStats_n1_get, _swigfaiss.HNSWStats_n1_set)
+    __swig_setmethods__["n2"] = _swigfaiss.HNSWStats_n2_set
+    __swig_getmethods__["n2"] = _swigfaiss.HNSWStats_n2_get
+    if _newclass:n2 = _swig_property(_swigfaiss.HNSWStats_n2_get, _swigfaiss.HNSWStats_n2_set)
+    __swig_setmethods__["n3"] = _swigfaiss.HNSWStats_n3_set
+    __swig_getmethods__["n3"] = _swigfaiss.HNSWStats_n3_get
+    if _newclass:n3 = _swig_property(_swigfaiss.HNSWStats_n3_get, _swigfaiss.HNSWStats_n3_set)
+    __swig_setmethods__["ndis"] = _swigfaiss.HNSWStats_ndis_set
+    __swig_getmethods__["ndis"] = _swigfaiss.HNSWStats_ndis_get
+    if _newclass:ndis = _swig_property(_swigfaiss.HNSWStats_ndis_get, _swigfaiss.HNSWStats_ndis_set)
+    __swig_setmethods__["nreorder"] = _swigfaiss.HNSWStats_nreorder_set
+    __swig_getmethods__["nreorder"] = _swigfaiss.HNSWStats_nreorder_get
+    if _newclass:nreorder = _swig_property(_swigfaiss.HNSWStats_nreorder_get, _swigfaiss.HNSWStats_nreorder_set)
+    __swig_setmethods__["view"] = _swigfaiss.HNSWStats_view_set
+    __swig_getmethods__["view"] = _swigfaiss.HNSWStats_view_get
+    if _newclass:view = _swig_property(_swigfaiss.HNSWStats_view_get, _swigfaiss.HNSWStats_view_set)
+    def __init__(self): 
+        this = _swigfaiss.new_HNSWStats()
+        try: self.this.append(this)
+        except: self.this = this
+    def reset(self): return _swigfaiss.HNSWStats_reset(self)
+    __swig_destroy__ = _swigfaiss.delete_HNSWStats
+    __del__ = lambda self : None;
+HNSWStats_swigregister = _swigfaiss.HNSWStats_swigregister
+HNSWStats_swigregister(HNSWStats)
+
+class ReconstructFromNeighbors(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ReconstructFromNeighbors, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, ReconstructFromNeighbors, name)
+    __repr__ = _swig_repr
+    __swig_getmethods__["index"] = _swigfaiss.ReconstructFromNeighbors_index_get
+    if _newclass:index = _swig_property(_swigfaiss.ReconstructFromNeighbors_index_get)
+    __swig_setmethods__["M"] = _swigfaiss.ReconstructFromNeighbors_M_set
+    __swig_getmethods__["M"] = _swigfaiss.ReconstructFromNeighbors_M_get
+    if _newclass:M = _swig_property(_swigfaiss.ReconstructFromNeighbors_M_get, _swigfaiss.ReconstructFromNeighbors_M_set)
+    __swig_setmethods__["k"] = _swigfaiss.ReconstructFromNeighbors_k_set
+    __swig_getmethods__["k"] = _swigfaiss.ReconstructFromNeighbors_k_get
+    if _newclass:k = _swig_property(_swigfaiss.ReconstructFromNeighbors_k_get, _swigfaiss.ReconstructFromNeighbors_k_set)
+    __swig_setmethods__["nsq"] = _swigfaiss.ReconstructFromNeighbors_nsq_set
+    __swig_getmethods__["nsq"] = _swigfaiss.ReconstructFromNeighbors_nsq_get
+    if _newclass:nsq = _swig_property(_swigfaiss.ReconstructFromNeighbors_nsq_get, _swigfaiss.ReconstructFromNeighbors_nsq_set)
+    __swig_setmethods__["code_size"] = _swigfaiss.ReconstructFromNeighbors_code_size_set
+    __swig_getmethods__["code_size"] = _swigfaiss.ReconstructFromNeighbors_code_size_get
+    if _newclass:code_size = _swig_property(_swigfaiss.ReconstructFromNeighbors_code_size_get, _swigfaiss.ReconstructFromNeighbors_code_size_set)
+    __swig_setmethods__["k_reorder"] = _swigfaiss.ReconstructFromNeighbors_k_reorder_set
+    __swig_getmethods__["k_reorder"] = _swigfaiss.ReconstructFromNeighbors_k_reorder_get
+    if _newclass:k_reorder = _swig_property(_swigfaiss.ReconstructFromNeighbors_k_reorder_get, _swigfaiss.ReconstructFromNeighbors_k_reorder_set)
+    __swig_setmethods__["codebook"] = _swigfaiss.ReconstructFromNeighbors_codebook_set
+    __swig_getmethods__["codebook"] = _swigfaiss.ReconstructFromNeighbors_codebook_get
+    if _newclass:codebook = _swig_property(_swigfaiss.ReconstructFromNeighbors_codebook_get, _swigfaiss.ReconstructFromNeighbors_codebook_set)
+    __swig_setmethods__["codes"] = _swigfaiss.ReconstructFromNeighbors_codes_set
+    __swig_getmethods__["codes"] = _swigfaiss.ReconstructFromNeighbors_codes_get
+    if _newclass:codes = _swig_property(_swigfaiss.ReconstructFromNeighbors_codes_get, _swigfaiss.ReconstructFromNeighbors_codes_set)
+    __swig_setmethods__["ntotal"] = _swigfaiss.ReconstructFromNeighbors_ntotal_set
+    __swig_getmethods__["ntotal"] = _swigfaiss.ReconstructFromNeighbors_ntotal_get
+    if _newclass:ntotal = _swig_property(_swigfaiss.ReconstructFromNeighbors_ntotal_get, _swigfaiss.ReconstructFromNeighbors_ntotal_set)
+    __swig_setmethods__["d"] = _swigfaiss.ReconstructFromNeighbors_d_set
+    __swig_getmethods__["d"] = _swigfaiss.ReconstructFromNeighbors_d_get
+    if _newclass:d = _swig_property(_swigfaiss.ReconstructFromNeighbors_d_get, _swigfaiss.ReconstructFromNeighbors_d_set)
+    __swig_setmethods__["dsub"] = _swigfaiss.ReconstructFromNeighbors_dsub_set
+    __swig_getmethods__["dsub"] = _swigfaiss.ReconstructFromNeighbors_dsub_get
+    if _newclass:dsub = _swig_property(_swigfaiss.ReconstructFromNeighbors_dsub_get, _swigfaiss.ReconstructFromNeighbors_dsub_set)
+    def __init__(self, *args): 
+        this = _swigfaiss.new_ReconstructFromNeighbors(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def add_codes(self, *args): return _swigfaiss.ReconstructFromNeighbors_add_codes(self, *args)
+    def compute_distances(self, *args): return _swigfaiss.ReconstructFromNeighbors_compute_distances(self, *args)
+    def estimate_code(self, *args): return _swigfaiss.ReconstructFromNeighbors_estimate_code(self, *args)
+    def reconstruct(self, *args): return _swigfaiss.ReconstructFromNeighbors_reconstruct(self, *args)
+    def reconstruct_n(self, *args): return _swigfaiss.ReconstructFromNeighbors_reconstruct_n(self, *args)
+    def get_neighbor_table(self, *args): return _swigfaiss.ReconstructFromNeighbors_get_neighbor_table(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_ReconstructFromNeighbors
+    __del__ = lambda self : None;
+ReconstructFromNeighbors_swigregister = _swigfaiss.ReconstructFromNeighbors_swigregister
+ReconstructFromNeighbors_swigregister(ReconstructFromNeighbors)
+
+class IndexHNSW(Index):
+    __swig_setmethods__ = {}
+    for _s in [Index]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IndexHNSW, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Index]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, IndexHNSW, name)
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    __swig_setmethods__["hnsw"] = _swigfaiss.IndexHNSW_hnsw_set
+    __swig_getmethods__["hnsw"] = _swigfaiss.IndexHNSW_hnsw_get
+    if _newclass:hnsw = _swig_property(_swigfaiss.IndexHNSW_hnsw_get, _swigfaiss.IndexHNSW_hnsw_set)
+    __swig_setmethods__["own_fields"] = _swigfaiss.IndexHNSW_own_fields_set
+    __swig_getmethods__["own_fields"] = _swigfaiss.IndexHNSW_own_fields_get
+    if _newclass:own_fields = _swig_property(_swigfaiss.IndexHNSW_own_fields_get, _swigfaiss.IndexHNSW_own_fields_set)
+    __swig_setmethods__["storage"] = _swigfaiss.IndexHNSW_storage_set
+    __swig_getmethods__["storage"] = _swigfaiss.IndexHNSW_storage_get
+    if _newclass:storage = _swig_property(_swigfaiss.IndexHNSW_storage_get, _swigfaiss.IndexHNSW_storage_set)
+    __swig_setmethods__["reconstruct_from_neighbors"] = _swigfaiss.IndexHNSW_reconstruct_from_neighbors_set
+    __swig_getmethods__["reconstruct_from_neighbors"] = _swigfaiss.IndexHNSW_reconstruct_from_neighbors_get
+    if _newclass:reconstruct_from_neighbors = _swig_property(_swigfaiss.IndexHNSW_reconstruct_from_neighbors_get, _swigfaiss.IndexHNSW_reconstruct_from_neighbors_set)
+    __swig_destroy__ = _swigfaiss.delete_IndexHNSW
+    __del__ = lambda self : None;
+    def get_distance_computer(self): return _swigfaiss.IndexHNSW_get_distance_computer(self)
+    def add(self, *args): return _swigfaiss.IndexHNSW_add(self, *args)
+    def train(self, *args): return _swigfaiss.IndexHNSW_train(self, *args)
+    def search(self, *args): return _swigfaiss.IndexHNSW_search(self, *args)
+    def reconstruct(self, *args): return _swigfaiss.IndexHNSW_reconstruct(self, *args)
+    def reset(self): return _swigfaiss.IndexHNSW_reset(self)
+    def shrink_level_0_neighbors(self, *args): return _swigfaiss.IndexHNSW_shrink_level_0_neighbors(self, *args)
+    def search_level_0(self, *args): return _swigfaiss.IndexHNSW_search_level_0(self, *args)
+    def init_level_0_from_knngraph(self, *args): return _swigfaiss.IndexHNSW_init_level_0_from_knngraph(self, *args)
+    def init_level_0_from_entry_points(self, *args): return _swigfaiss.IndexHNSW_init_level_0_from_entry_points(self, *args)
+    def reorder_links(self): return _swigfaiss.IndexHNSW_reorder_links(self)
+    def link_singletons(self): return _swigfaiss.IndexHNSW_link_singletons(self)
+IndexHNSW_swigregister = _swigfaiss.IndexHNSW_swigregister
+IndexHNSW_swigregister(IndexHNSW)
+
+class IndexHNSWFlat(IndexHNSW):
+    __swig_setmethods__ = {}
+    for _s in [IndexHNSW]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IndexHNSWFlat, name, value)
+    __swig_getmethods__ = {}
+    for _s in [IndexHNSW]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, IndexHNSWFlat, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _swigfaiss.new_IndexHNSWFlat(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def get_distance_computer(self): return _swigfaiss.IndexHNSWFlat_get_distance_computer(self)
+    __swig_destroy__ = _swigfaiss.delete_IndexHNSWFlat
+    __del__ = lambda self : None;
+IndexHNSWFlat_swigregister = _swigfaiss.IndexHNSWFlat_swigregister
+IndexHNSWFlat_swigregister(IndexHNSWFlat)
+
+class IndexHNSWPQ(IndexHNSW):
+    __swig_setmethods__ = {}
+    for _s in [IndexHNSW]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IndexHNSWPQ, name, value)
+    __swig_getmethods__ = {}
+    for _s in [IndexHNSW]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, IndexHNSWPQ, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _swigfaiss.new_IndexHNSWPQ(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def train(self, *args): return _swigfaiss.IndexHNSWPQ_train(self, *args)
+    def get_distance_computer(self): return _swigfaiss.IndexHNSWPQ_get_distance_computer(self)
+    __swig_destroy__ = _swigfaiss.delete_IndexHNSWPQ
+    __del__ = lambda self : None;
+IndexHNSWPQ_swigregister = _swigfaiss.IndexHNSWPQ_swigregister
+IndexHNSWPQ_swigregister(IndexHNSWPQ)
+
+class IndexHNSWSQ(IndexHNSW):
+    __swig_setmethods__ = {}
+    for _s in [IndexHNSW]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IndexHNSWSQ, name, value)
+    __swig_getmethods__ = {}
+    for _s in [IndexHNSW]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, IndexHNSWSQ, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _swigfaiss.new_IndexHNSWSQ(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def get_distance_computer(self): return _swigfaiss.IndexHNSWSQ_get_distance_computer(self)
+    __swig_destroy__ = _swigfaiss.delete_IndexHNSWSQ
+    __del__ = lambda self : None;
+IndexHNSWSQ_swigregister = _swigfaiss.IndexHNSWSQ_swigregister
+IndexHNSWSQ_swigregister(IndexHNSWSQ)
+
+class IndexHNSW2Level(IndexHNSW):
+    __swig_setmethods__ = {}
+    for _s in [IndexHNSW]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IndexHNSW2Level, name, value)
+    __swig_getmethods__ = {}
+    for _s in [IndexHNSW]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, IndexHNSW2Level, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _swigfaiss.new_IndexHNSW2Level(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def get_distance_computer(self): return _swigfaiss.IndexHNSW2Level_get_distance_computer(self)
+    def flip_to_ivf(self): return _swigfaiss.IndexHNSW2Level_flip_to_ivf(self)
+    def search(self, *args): return _swigfaiss.IndexHNSW2Level_search(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_IndexHNSW2Level
+    __del__ = lambda self : None;
+IndexHNSW2Level_swigregister = _swigfaiss.IndexHNSW2Level_swigregister
+IndexHNSW2Level_swigregister(IndexHNSW2Level)
 
 class IndexIVFFlat(IndexIVF):
     __swig_setmethods__ = {}
@@ -1651,21 +2329,12 @@ class IndexIVFFlat(IndexIVF):
     for _s in [IndexIVF]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, IndexIVFFlat, name)
     __repr__ = _swig_repr
-    __swig_setmethods__["vecs"] = _swigfaiss.IndexIVFFlat_vecs_set
-    __swig_getmethods__["vecs"] = _swigfaiss.IndexIVFFlat_vecs_get
-    if _newclass:vecs = _swig_property(_swigfaiss.IndexIVFFlat_vecs_get, _swigfaiss.IndexIVFFlat_vecs_set)
-    def set_typename(self): return _swigfaiss.IndexIVFFlat_set_typename(self)
     def add_core(self, *args): return _swigfaiss.IndexIVFFlat_add_core(self, *args)
     def add_with_ids(self, *args): return _swigfaiss.IndexIVFFlat_add_with_ids(self, *args)
-    def search(self, *args): return _swigfaiss.IndexIVFFlat_search(self, *args)
+    def search_preassigned(self, *args): return _swigfaiss.IndexIVFFlat_search_preassigned(self, *args)
     def range_search(self, *args): return _swigfaiss.IndexIVFFlat_range_search(self, *args)
-    def copy_subset_to(self, *args): return _swigfaiss.IndexIVFFlat_copy_subset_to(self, *args)
-    def reset(self): return _swigfaiss.IndexIVFFlat_reset(self)
-    def remove_ids(self, *args): return _swigfaiss.IndexIVFFlat_remove_ids(self, *args)
-    def search_knn_inner_product(self, *args): return _swigfaiss.IndexIVFFlat_search_knn_inner_product(self, *args)
-    def search_knn_L2sqr(self, *args): return _swigfaiss.IndexIVFFlat_search_knn_L2sqr(self, *args)
-    def reconstruct(self, *args): return _swigfaiss.IndexIVFFlat_reconstruct(self, *args)
-    def merge_from_residuals(self, *args): return _swigfaiss.IndexIVFFlat_merge_from_residuals(self, *args)
+    def update_vectors(self, *args): return _swigfaiss.IndexIVFFlat_update_vectors(self, *args)
+    def reconstruct_from_offset(self, *args): return _swigfaiss.IndexIVFFlat_reconstruct_from_offset(self, *args)
     def __init__(self, *args): 
         this = _swigfaiss.new_IndexIVFFlat(*args)
         try: self.this.append(this)
@@ -1674,6 +2343,60 @@ class IndexIVFFlat(IndexIVF):
     __del__ = lambda self : None;
 IndexIVFFlat_swigregister = _swigfaiss.IndexIVFFlat_swigregister
 IndexIVFFlat_swigregister(IndexIVFFlat)
+
+class OnDiskInvertedLists(InvertedLists):
+    __swig_setmethods__ = {}
+    for _s in [InvertedLists]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, OnDiskInvertedLists, name, value)
+    __swig_getmethods__ = {}
+    for _s in [InvertedLists]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, OnDiskInvertedLists, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["lists"] = _swigfaiss.OnDiskInvertedLists_lists_set
+    __swig_getmethods__["lists"] = _swigfaiss.OnDiskInvertedLists_lists_get
+    if _newclass:lists = _swig_property(_swigfaiss.OnDiskInvertedLists_lists_get, _swigfaiss.OnDiskInvertedLists_lists_set)
+    __swig_setmethods__["slots"] = _swigfaiss.OnDiskInvertedLists_slots_set
+    __swig_getmethods__["slots"] = _swigfaiss.OnDiskInvertedLists_slots_get
+    if _newclass:slots = _swig_property(_swigfaiss.OnDiskInvertedLists_slots_get, _swigfaiss.OnDiskInvertedLists_slots_set)
+    __swig_setmethods__["filename"] = _swigfaiss.OnDiskInvertedLists_filename_set
+    __swig_getmethods__["filename"] = _swigfaiss.OnDiskInvertedLists_filename_get
+    if _newclass:filename = _swig_property(_swigfaiss.OnDiskInvertedLists_filename_get, _swigfaiss.OnDiskInvertedLists_filename_set)
+    __swig_setmethods__["totsize"] = _swigfaiss.OnDiskInvertedLists_totsize_set
+    __swig_getmethods__["totsize"] = _swigfaiss.OnDiskInvertedLists_totsize_get
+    if _newclass:totsize = _swig_property(_swigfaiss.OnDiskInvertedLists_totsize_get, _swigfaiss.OnDiskInvertedLists_totsize_set)
+    __swig_setmethods__["ptr"] = _swigfaiss.OnDiskInvertedLists_ptr_set
+    __swig_getmethods__["ptr"] = _swigfaiss.OnDiskInvertedLists_ptr_get
+    if _newclass:ptr = _swig_property(_swigfaiss.OnDiskInvertedLists_ptr_get, _swigfaiss.OnDiskInvertedLists_ptr_set)
+    __swig_setmethods__["read_only"] = _swigfaiss.OnDiskInvertedLists_read_only_set
+    __swig_getmethods__["read_only"] = _swigfaiss.OnDiskInvertedLists_read_only_get
+    if _newclass:read_only = _swig_property(_swigfaiss.OnDiskInvertedLists_read_only_get, _swigfaiss.OnDiskInvertedLists_read_only_set)
+    def list_size(self, *args): return _swigfaiss.OnDiskInvertedLists_list_size(self, *args)
+    def get_codes(self, *args): return _swigfaiss.OnDiskInvertedLists_get_codes(self, *args)
+    def get_ids(self, *args): return _swigfaiss.OnDiskInvertedLists_get_ids(self, *args)
+    def add_entries(self, *args): return _swigfaiss.OnDiskInvertedLists_add_entries(self, *args)
+    def update_entries(self, *args): return _swigfaiss.OnDiskInvertedLists_update_entries(self, *args)
+    def resize(self, *args): return _swigfaiss.OnDiskInvertedLists_resize(self, *args)
+    def merge_from(self, *args): return _swigfaiss.OnDiskInvertedLists_merge_from(self, *args)
+    def prefetch_lists(self, *args): return _swigfaiss.OnDiskInvertedLists_prefetch_lists(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_OnDiskInvertedLists
+    __del__ = lambda self : None;
+    __swig_setmethods__["locks"] = _swigfaiss.OnDiskInvertedLists_locks_set
+    __swig_getmethods__["locks"] = _swigfaiss.OnDiskInvertedLists_locks_get
+    if _newclass:locks = _swig_property(_swigfaiss.OnDiskInvertedLists_locks_get, _swigfaiss.OnDiskInvertedLists_locks_set)
+    __swig_setmethods__["pf"] = _swigfaiss.OnDiskInvertedLists_pf_set
+    __swig_getmethods__["pf"] = _swigfaiss.OnDiskInvertedLists_pf_get
+    if _newclass:pf = _swig_property(_swigfaiss.OnDiskInvertedLists_pf_get, _swigfaiss.OnDiskInvertedLists_pf_set)
+    def do_mmap(self): return _swigfaiss.OnDiskInvertedLists_do_mmap(self)
+    def update_totsize(self, *args): return _swigfaiss.OnDiskInvertedLists_update_totsize(self, *args)
+    def resize_locked(self, *args): return _swigfaiss.OnDiskInvertedLists_resize_locked(self, *args)
+    def allocate_slot(self, *args): return _swigfaiss.OnDiskInvertedLists_allocate_slot(self, *args)
+    def free_slot(self, *args): return _swigfaiss.OnDiskInvertedLists_free_slot(self, *args)
+    def __init__(self, *args): 
+        this = _swigfaiss.new_OnDiskInvertedLists(*args)
+        try: self.this.append(this)
+        except: self.this = this
+OnDiskInvertedLists_swigregister = _swigfaiss.OnDiskInvertedLists_swigregister
+OnDiskInvertedLists_swigregister(OnDiskInvertedLists)
 
 class IndexIVFPQ(IndexIVF):
     __swig_setmethods__ = {}
@@ -1689,9 +2412,6 @@ class IndexIVFPQ(IndexIVF):
     __swig_setmethods__["use_precomputed_table"] = _swigfaiss.IndexIVFPQ_use_precomputed_table_set
     __swig_getmethods__["use_precomputed_table"] = _swigfaiss.IndexIVFPQ_use_precomputed_table_get
     if _newclass:use_precomputed_table = _swig_property(_swigfaiss.IndexIVFPQ_use_precomputed_table_get, _swigfaiss.IndexIVFPQ_use_precomputed_table_set)
-    __swig_setmethods__["code_size"] = _swigfaiss.IndexIVFPQ_code_size_set
-    __swig_getmethods__["code_size"] = _swigfaiss.IndexIVFPQ_code_size_get
-    if _newclass:code_size = _swig_property(_swigfaiss.IndexIVFPQ_code_size_get, _swigfaiss.IndexIVFPQ_code_size_set)
     __swig_setmethods__["pq"] = _swigfaiss.IndexIVFPQ_pq_set
     __swig_getmethods__["pq"] = _swigfaiss.IndexIVFPQ_pq_get
     if _newclass:pq = _swig_property(_swigfaiss.IndexIVFPQ_pq_get, _swigfaiss.IndexIVFPQ_pq_set)
@@ -1704,35 +2424,23 @@ class IndexIVFPQ(IndexIVF):
     __swig_setmethods__["scan_table_threshold"] = _swigfaiss.IndexIVFPQ_scan_table_threshold_set
     __swig_getmethods__["scan_table_threshold"] = _swigfaiss.IndexIVFPQ_scan_table_threshold_get
     if _newclass:scan_table_threshold = _swig_property(_swigfaiss.IndexIVFPQ_scan_table_threshold_get, _swigfaiss.IndexIVFPQ_scan_table_threshold_set)
-    __swig_setmethods__["max_codes"] = _swigfaiss.IndexIVFPQ_max_codes_set
-    __swig_getmethods__["max_codes"] = _swigfaiss.IndexIVFPQ_max_codes_get
-    if _newclass:max_codes = _swig_property(_swigfaiss.IndexIVFPQ_max_codes_get, _swigfaiss.IndexIVFPQ_max_codes_set)
     __swig_setmethods__["polysemous_ht"] = _swigfaiss.IndexIVFPQ_polysemous_ht_set
     __swig_getmethods__["polysemous_ht"] = _swigfaiss.IndexIVFPQ_polysemous_ht_get
     if _newclass:polysemous_ht = _swig_property(_swigfaiss.IndexIVFPQ_polysemous_ht_get, _swigfaiss.IndexIVFPQ_polysemous_ht_set)
-    __swig_setmethods__["codes"] = _swigfaiss.IndexIVFPQ_codes_set
-    __swig_getmethods__["codes"] = _swigfaiss.IndexIVFPQ_codes_get
-    if _newclass:codes = _swig_property(_swigfaiss.IndexIVFPQ_codes_get, _swigfaiss.IndexIVFPQ_codes_set)
     __swig_setmethods__["precomputed_table"] = _swigfaiss.IndexIVFPQ_precomputed_table_set
     __swig_getmethods__["precomputed_table"] = _swigfaiss.IndexIVFPQ_precomputed_table_get
     if _newclass:precomputed_table = _swig_property(_swigfaiss.IndexIVFPQ_precomputed_table_get, _swigfaiss.IndexIVFPQ_precomputed_table_set)
-    def set_typename(self): return _swigfaiss.IndexIVFPQ_set_typename(self)
     def add_with_ids(self, *args): return _swigfaiss.IndexIVFPQ_add_with_ids(self, *args)
     def add_core_o(self, *args): return _swigfaiss.IndexIVFPQ_add_core_o(self, *args)
-    def search(self, *args): return _swigfaiss.IndexIVFPQ_search(self, *args)
-    def reset(self): return _swigfaiss.IndexIVFPQ_reset(self)
-    def remove_ids(self, *args): return _swigfaiss.IndexIVFPQ_remove_ids(self, *args)
     def train_residual(self, *args): return _swigfaiss.IndexIVFPQ_train_residual(self, *args)
     def train_residual_o(self, *args): return _swigfaiss.IndexIVFPQ_train_residual_o(self, *args)
-    def reconstruct_n(self, *args): return _swigfaiss.IndexIVFPQ_reconstruct_n(self, *args)
-    def reconstruct(self, *args): return _swigfaiss.IndexIVFPQ_reconstruct(self, *args)
+    def reconstruct_from_offset(self, *args): return _swigfaiss.IndexIVFPQ_reconstruct_from_offset(self, *args)
     def find_duplicates(self, *args): return _swigfaiss.IndexIVFPQ_find_duplicates(self, *args)
     def encode(self, *args): return _swigfaiss.IndexIVFPQ_encode(self, *args)
     def encode_multiple(self, *args): return _swigfaiss.IndexIVFPQ_encode_multiple(self, *args)
-    def search_knn_with_key(self, *args): return _swigfaiss.IndexIVFPQ_search_knn_with_key(self, *args)
+    def decode_multiple(self, *args): return _swigfaiss.IndexIVFPQ_decode_multiple(self, *args)
+    def search_preassigned(self, *args): return _swigfaiss.IndexIVFPQ_search_preassigned(self, *args)
     def precompute_table(self): return _swigfaiss.IndexIVFPQ_precompute_table(self)
-    def merge_from_residuals(self, *args): return _swigfaiss.IndexIVFPQ_merge_from_residuals(self, *args)
-    def copy_subset_to(self, *args): return _swigfaiss.IndexIVFPQ_copy_subset_to(self, *args)
     def __init__(self, *args): 
         this = _swigfaiss.new_IndexIVFPQ(*args)
         try: self.this.append(this)
@@ -1811,15 +2519,14 @@ class IndexIVFPQR(IndexIVFPQ):
     __swig_setmethods__["k_factor"] = _swigfaiss.IndexIVFPQR_k_factor_set
     __swig_getmethods__["k_factor"] = _swigfaiss.IndexIVFPQR_k_factor_get
     if _newclass:k_factor = _swig_property(_swigfaiss.IndexIVFPQR_k_factor_get, _swigfaiss.IndexIVFPQR_k_factor_set)
-    def set_typename(self): return _swigfaiss.IndexIVFPQR_set_typename(self)
     def reset(self): return _swigfaiss.IndexIVFPQR_reset(self)
     def remove_ids(self, *args): return _swigfaiss.IndexIVFPQR_remove_ids(self, *args)
     def train_residual(self, *args): return _swigfaiss.IndexIVFPQR_train_residual(self, *args)
     def add_with_ids(self, *args): return _swigfaiss.IndexIVFPQR_add_with_ids(self, *args)
     def add_core(self, *args): return _swigfaiss.IndexIVFPQR_add_core(self, *args)
-    def reconstruct_n(self, *args): return _swigfaiss.IndexIVFPQR_reconstruct_n(self, *args)
-    def search(self, *args): return _swigfaiss.IndexIVFPQR_search(self, *args)
-    def merge_from_residuals(self, *args): return _swigfaiss.IndexIVFPQR_merge_from_residuals(self, *args)
+    def reconstruct_from_offset(self, *args): return _swigfaiss.IndexIVFPQR_reconstruct_from_offset(self, *args)
+    def merge_from(self, *args): return _swigfaiss.IndexIVFPQR_merge_from(self, *args)
+    def search_preassigned(self, *args): return _swigfaiss.IndexIVFPQR_search_preassigned(self, *args)
     def __init__(self, *args): 
         this = _swigfaiss.new_IndexIVFPQR(*args)
         try: self.this.append(this)
@@ -1829,44 +2536,47 @@ class IndexIVFPQR(IndexIVFPQ):
 IndexIVFPQR_swigregister = _swigfaiss.IndexIVFPQR_swigregister
 IndexIVFPQR_swigregister(IndexIVFPQR)
 
-class IndexIVFPQCompact(IndexIVFPQ):
+class Index2Layer(Index):
     __swig_setmethods__ = {}
-    for _s in [IndexIVFPQ]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, IndexIVFPQCompact, name, value)
+    for _s in [Index]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Index2Layer, name, value)
     __swig_getmethods__ = {}
-    for _s in [IndexIVFPQ]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
-    __getattr__ = lambda self, name: _swig_getattr(self, IndexIVFPQCompact, name)
+    for _s in [Index]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, Index2Layer, name)
     __repr__ = _swig_repr
-    Alloc_type_none = _swigfaiss.IndexIVFPQCompact_Alloc_type_none
-    Alloc_type_new = _swigfaiss.IndexIVFPQCompact_Alloc_type_new
-    Alloc_type_mmap = _swigfaiss.IndexIVFPQCompact_Alloc_type_mmap
-    __swig_setmethods__["limits"] = _swigfaiss.IndexIVFPQCompact_limits_set
-    __swig_getmethods__["limits"] = _swigfaiss.IndexIVFPQCompact_limits_get
-    if _newclass:limits = _swig_property(_swigfaiss.IndexIVFPQCompact_limits_get, _swigfaiss.IndexIVFPQCompact_limits_set)
-    __swig_setmethods__["compact_ids"] = _swigfaiss.IndexIVFPQCompact_compact_ids_set
-    __swig_getmethods__["compact_ids"] = _swigfaiss.IndexIVFPQCompact_compact_ids_get
-    if _newclass:compact_ids = _swig_property(_swigfaiss.IndexIVFPQCompact_compact_ids_get, _swigfaiss.IndexIVFPQCompact_compact_ids_set)
-    __swig_setmethods__["compact_codes"] = _swigfaiss.IndexIVFPQCompact_compact_codes_set
-    __swig_getmethods__["compact_codes"] = _swigfaiss.IndexIVFPQCompact_compact_codes_get
-    if _newclass:compact_codes = _swig_property(_swigfaiss.IndexIVFPQCompact_compact_codes_get, _swigfaiss.IndexIVFPQCompact_compact_codes_set)
-    __swig_setmethods__["mmap_buffer"] = _swigfaiss.IndexIVFPQCompact_mmap_buffer_set
-    __swig_getmethods__["mmap_buffer"] = _swigfaiss.IndexIVFPQCompact_mmap_buffer_get
-    if _newclass:mmap_buffer = _swig_property(_swigfaiss.IndexIVFPQCompact_mmap_buffer_get, _swigfaiss.IndexIVFPQCompact_mmap_buffer_set)
-    __swig_setmethods__["mmap_length"] = _swigfaiss.IndexIVFPQCompact_mmap_length_set
-    __swig_getmethods__["mmap_length"] = _swigfaiss.IndexIVFPQCompact_mmap_length_get
-    if _newclass:mmap_length = _swig_property(_swigfaiss.IndexIVFPQCompact_mmap_length_get, _swigfaiss.IndexIVFPQCompact_mmap_length_set)
-    def search_knn_with_key(self, *args): return _swigfaiss.IndexIVFPQCompact_search_knn_with_key(self, *args)
-    def add(self, *args): return _swigfaiss.IndexIVFPQCompact_add(self, *args)
-    def reset(self): return _swigfaiss.IndexIVFPQCompact_reset(self)
-    def train(self, *args): return _swigfaiss.IndexIVFPQCompact_train(self, *args)
-    __swig_destroy__ = _swigfaiss.delete_IndexIVFPQCompact
-    __del__ = lambda self : None;
+    __swig_setmethods__["q1"] = _swigfaiss.Index2Layer_q1_set
+    __swig_getmethods__["q1"] = _swigfaiss.Index2Layer_q1_get
+    if _newclass:q1 = _swig_property(_swigfaiss.Index2Layer_q1_get, _swigfaiss.Index2Layer_q1_set)
+    __swig_setmethods__["pq"] = _swigfaiss.Index2Layer_pq_set
+    __swig_getmethods__["pq"] = _swigfaiss.Index2Layer_pq_get
+    if _newclass:pq = _swig_property(_swigfaiss.Index2Layer_pq_get, _swigfaiss.Index2Layer_pq_set)
+    __swig_setmethods__["codes"] = _swigfaiss.Index2Layer_codes_set
+    __swig_getmethods__["codes"] = _swigfaiss.Index2Layer_codes_get
+    if _newclass:codes = _swig_property(_swigfaiss.Index2Layer_codes_get, _swigfaiss.Index2Layer_codes_set)
+    __swig_setmethods__["code_size_1"] = _swigfaiss.Index2Layer_code_size_1_set
+    __swig_getmethods__["code_size_1"] = _swigfaiss.Index2Layer_code_size_1_get
+    if _newclass:code_size_1 = _swig_property(_swigfaiss.Index2Layer_code_size_1_get, _swigfaiss.Index2Layer_code_size_1_set)
+    __swig_setmethods__["code_size_2"] = _swigfaiss.Index2Layer_code_size_2_set
+    __swig_getmethods__["code_size_2"] = _swigfaiss.Index2Layer_code_size_2_get
+    if _newclass:code_size_2 = _swig_property(_swigfaiss.Index2Layer_code_size_2_get, _swigfaiss.Index2Layer_code_size_2_set)
+    __swig_setmethods__["code_size"] = _swigfaiss.Index2Layer_code_size_set
+    __swig_getmethods__["code_size"] = _swigfaiss.Index2Layer_code_size_get
+    if _newclass:code_size = _swig_property(_swigfaiss.Index2Layer_code_size_get, _swigfaiss.Index2Layer_code_size_set)
     def __init__(self, *args): 
-        this = _swigfaiss.new_IndexIVFPQCompact(*args)
+        this = _swigfaiss.new_Index2Layer(*args)
         try: self.this.append(this)
         except: self.this = this
-IndexIVFPQCompact_swigregister = _swigfaiss.IndexIVFPQCompact_swigregister
-IndexIVFPQCompact_swigregister(IndexIVFPQCompact)
+    __swig_destroy__ = _swigfaiss.delete_Index2Layer
+    __del__ = lambda self : None;
+    def train(self, *args): return _swigfaiss.Index2Layer_train(self, *args)
+    def add(self, *args): return _swigfaiss.Index2Layer_add(self, *args)
+    def search(self, *args): return _swigfaiss.Index2Layer_search(self, *args)
+    def reconstruct_n(self, *args): return _swigfaiss.Index2Layer_reconstruct_n(self, *args)
+    def reconstruct(self, *args): return _swigfaiss.Index2Layer_reconstruct(self, *args)
+    def reset(self): return _swigfaiss.Index2Layer_reset(self)
+    def transfer_to_IVFPQ(self, *args): return _swigfaiss.Index2Layer_transfer_to_IVFPQ(self, *args)
+Index2Layer_swigregister = _swigfaiss.Index2Layer_swigregister
+Index2Layer_swigregister(Index2Layer)
 
 class IndexIDMap(Index):
     __swig_setmethods__ = {}
@@ -1885,20 +2595,45 @@ class IndexIDMap(Index):
     __swig_setmethods__["id_map"] = _swigfaiss.IndexIDMap_id_map_set
     __swig_getmethods__["id_map"] = _swigfaiss.IndexIDMap_id_map_get
     if _newclass:id_map = _swig_property(_swigfaiss.IndexIDMap_id_map_get, _swigfaiss.IndexIDMap_id_map_set)
-    def __init__(self, *args): 
-        this = _swigfaiss.new_IndexIDMap(*args)
-        try: self.this.append(this)
-        except: self.this = this
     def add_with_ids(self, *args): return _swigfaiss.IndexIDMap_add_with_ids(self, *args)
     def add(self, *args): return _swigfaiss.IndexIDMap_add(self, *args)
     def search(self, *args): return _swigfaiss.IndexIDMap_search(self, *args)
     def train(self, *args): return _swigfaiss.IndexIDMap_train(self, *args)
     def reset(self): return _swigfaiss.IndexIDMap_reset(self)
-    def set_typename(self): return _swigfaiss.IndexIDMap_set_typename(self)
+    def remove_ids(self, *args): return _swigfaiss.IndexIDMap_remove_ids(self, *args)
+    def range_search(self, *args): return _swigfaiss.IndexIDMap_range_search(self, *args)
     __swig_destroy__ = _swigfaiss.delete_IndexIDMap
     __del__ = lambda self : None;
+    def __init__(self, *args): 
+        this = _swigfaiss.new_IndexIDMap(*args)
+        try: self.this.append(this)
+        except: self.this = this
 IndexIDMap_swigregister = _swigfaiss.IndexIDMap_swigregister
 IndexIDMap_swigregister(IndexIDMap)
+
+class IndexIDMap2(IndexIDMap):
+    __swig_setmethods__ = {}
+    for _s in [IndexIDMap]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IndexIDMap2, name, value)
+    __swig_getmethods__ = {}
+    for _s in [IndexIDMap]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, IndexIDMap2, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["rev_map"] = _swigfaiss.IndexIDMap2_rev_map_set
+    __swig_getmethods__["rev_map"] = _swigfaiss.IndexIDMap2_rev_map_get
+    if _newclass:rev_map = _swig_property(_swigfaiss.IndexIDMap2_rev_map_get, _swigfaiss.IndexIDMap2_rev_map_set)
+    def construct_rev_map(self): return _swigfaiss.IndexIDMap2_construct_rev_map(self)
+    def add_with_ids(self, *args): return _swigfaiss.IndexIDMap2_add_with_ids(self, *args)
+    def remove_ids(self, *args): return _swigfaiss.IndexIDMap2_remove_ids(self, *args)
+    def reconstruct(self, *args): return _swigfaiss.IndexIDMap2_reconstruct(self, *args)
+    __swig_destroy__ = _swigfaiss.delete_IndexIDMap2
+    __del__ = lambda self : None;
+    def __init__(self, *args): 
+        this = _swigfaiss.new_IndexIDMap2(*args)
+        try: self.this.append(this)
+        except: self.this = this
+IndexIDMap2_swigregister = _swigfaiss.IndexIDMap2_swigregister
+IndexIDMap2_swigregister(IndexIDMap2)
 
 class IndexShards(Index):
     __swig_setmethods__ = {}
@@ -1932,7 +2667,6 @@ class IndexShards(Index):
     def search(self, *args): return _swigfaiss.IndexShards_search(self, *args)
     def train(self, *args): return _swigfaiss.IndexShards_train(self, *args)
     def reset(self): return _swigfaiss.IndexShards_reset(self)
-    def set_typename(self): return _swigfaiss.IndexShards_set_typename(self)
     __swig_destroy__ = _swigfaiss.delete_IndexShards
     __del__ = lambda self : None;
 IndexShards_swigregister = _swigfaiss.IndexShards_swigregister
@@ -1968,7 +2702,6 @@ class IndexSplitVectors(Index):
     def search(self, *args): return _swigfaiss.IndexSplitVectors_search(self, *args)
     def train(self, *args): return _swigfaiss.IndexSplitVectors_train(self, *args)
     def reset(self): return _swigfaiss.IndexSplitVectors_reset(self)
-    def set_typename(self): return _swigfaiss.IndexSplitVectors_set_typename(self)
     __swig_destroy__ = _swigfaiss.delete_IndexSplitVectors
     __del__ = lambda self : None;
 IndexSplitVectors_swigregister = _swigfaiss.IndexSplitVectors_swigregister
@@ -2027,6 +2760,8 @@ class Cloner(_object):
         except: self.this = this
 Cloner_swigregister = _swigfaiss.Cloner_swigregister
 Cloner_swigregister(Cloner)
+IO_FLAG_MMAP = cvar.IO_FLAG_MMAP
+IO_FLAG_READ_ONLY = cvar.IO_FLAG_READ_ONLY
 
 class AutoTuneCriterion(_object):
     __swig_setmethods__ = {}
@@ -2223,6 +2958,10 @@ index_factory = _swigfaiss.index_factory
 def swig_ptr(*args):
   return _swigfaiss.swig_ptr(*args)
 swig_ptr = _swigfaiss.swig_ptr
+
+def rev_swig_ptr(*args):
+  return _swigfaiss.rev_swig_ptr(*args)
+rev_swig_ptr = _swigfaiss.rev_swig_ptr
 class float_minheap_array_t(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, float_minheap_array_t, name, value)
@@ -2371,6 +3110,18 @@ omp_get_max_threads = _swigfaiss.omp_get_max_threads
 def memcpy(*args):
   return _swigfaiss.memcpy(*args)
 memcpy = _swigfaiss.memcpy
+
+def cast_integer_to_float_ptr(*args):
+  return _swigfaiss.cast_integer_to_float_ptr(*args)
+cast_integer_to_float_ptr = _swigfaiss.cast_integer_to_float_ptr
+
+def cast_integer_to_long_ptr(*args):
+  return _swigfaiss.cast_integer_to_long_ptr(*args)
+cast_integer_to_long_ptr = _swigfaiss.cast_integer_to_long_ptr
+
+def cast_integer_to_int_ptr(*args):
+  return _swigfaiss.cast_integer_to_int_ptr(*args)
+cast_integer_to_int_ptr = _swigfaiss.cast_integer_to_int_ptr
 class RangeSearchResult(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, RangeSearchResult, name, value)
@@ -2521,6 +3272,27 @@ RangeSearchPartialResult_swigregister(RangeSearchPartialResult)
 def ignore_SIGTTIN():
   return _swigfaiss.ignore_SIGTTIN()
 ignore_SIGTTIN = _swigfaiss.ignore_SIGTTIN
+class MapLong2Long(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, MapLong2Long, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, MapLong2Long, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["map"] = _swigfaiss.MapLong2Long_map_set
+    __swig_getmethods__["map"] = _swigfaiss.MapLong2Long_map_get
+    if _newclass:map = _swig_property(_swigfaiss.MapLong2Long_map_get, _swigfaiss.MapLong2Long_map_set)
+    def add(self, *args): return _swigfaiss.MapLong2Long_add(self, *args)
+    def search(self, *args): return _swigfaiss.MapLong2Long_search(self, *args)
+    def search_multiple(self, *args): return _swigfaiss.MapLong2Long_search_multiple(self, *args)
+    def __init__(self): 
+        this = _swigfaiss.new_MapLong2Long()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _swigfaiss.delete_MapLong2Long
+    __del__ = lambda self : None;
+MapLong2Long_swigregister = _swigfaiss.MapLong2Long_swigregister
+MapLong2Long_swigregister(MapLong2Long)
+
 # This file is compatible with both classic and new-style classes.
 
 

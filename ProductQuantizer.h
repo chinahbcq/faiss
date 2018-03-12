@@ -1,9 +1,8 @@
-
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
  *
- * This source code is licensed under the CC-by-NC license found in the
+ * This source code is licensed under the BSD+Patents license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
@@ -48,6 +47,10 @@ struct ProductQuantizer {
     train_type_t train_type;
 
     ClusteringParameters cp; ///< parameters used during clustering
+
+    /// if non-NULL, use this index for assignment (should be of size
+    /// d / M)
+    Index *assign_index;
 
     /// Centroid table, size M * ksub * dsub
     std::vector<float> centroids;
